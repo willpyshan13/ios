@@ -74,7 +74,7 @@ import UIKit
     //@objc public var use_themingBackground:             Bool = true                                               // Deprecated
     @objc public var use_themingLogo:                   Bool = false
     @objc public var use_storeLocalAutoUploadAll:       Bool = false
-    @objc public var use_configuration:                 Bool = false                                                // Don't touch me !!
+    @objc public var use_configuration:                 Bool = true                                                // Don't touch me !!
     @objc public var use_loginflowv2:                   Bool = false                                                // Don't touch me !!
 
     @objc public var disable_intro:                     Bool = false
