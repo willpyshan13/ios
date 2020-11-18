@@ -297,51 +297,52 @@
 
 - (void)dismissQRCode:(NSString *)value metadataType:(NSString *)metadataType
 {
-    NSString *protocolLogin = [[NCBrandOptions sharedInstance].webLoginAutenticationProtocol stringByAppendingString:@"login/"];
-    
-    if (value != nil && [value hasPrefix:protocolLogin] && [value containsString:@"user:"] && [value containsString:@"password:"] && [value containsString:@"server:"]) {
-        
-        value = [value stringByReplacingOccurrencesOfString:protocolLogin withString:@""];
-        
-        NSArray *valueArray = [value componentsSeparatedByString: @"&"];
-        
-        if (valueArray.count == 3) {
-            
-            _imageUser.hidden = NO;
-            _user.hidden = NO;
-            _imagePassword.hidden = NO;
-            _password.hidden = NO;
-            
-            [self.loginTypeView setTitle:NSLocalizedString(@"_web_login_", nil) forState:UIControlStateNormal];
-            
-            self.user.text = [valueArray[0] stringByReplacingOccurrencesOfString:@"user:" withString:@""];
-            self.password.text = [valueArray[1] stringByReplacingOccurrencesOfString:@"password:" withString:@""];
-            self.baseUrl.text = [valueArray[2] stringByReplacingOccurrencesOfString:@"server:" withString:@""];
-            
-            // Check whether baseUrl contain protocol. If not add https:// by default.
-            if(![self.baseUrl.text hasPrefix:@"https"] && ![self.baseUrl.text hasPrefix:@"http"]) {
-                self.baseUrl.text = [NSString stringWithFormat:@"https://%@",self.baseUrl.text];
-            }
-            
-            NSString *url = self.baseUrl.text;
-            NSString *user = self.user.text;
-            NSString *token = self.password.text;
-            
-            self.login.enabled = NO;
-            [self.activity startAnimating];
-            
-            NSString *webDAV = [[NCUtility shared] getWebDAVWithAccount:appDelegate.account];
-            NSString *serverUrl = [NSString stringWithFormat:@"%@/%@", url, webDAV];
-            
-            [[NCCommunication shared] checkServerWithServerUrl:serverUrl completionHandler:^(NSInteger errorCode, NSString *errorDescription) {
-                
-                [self.activity stopAnimating];
-                self.login.enabled = YES;
-                
-                [self AfterLoginWithUrl:url user:user token:token errorCode:errorCode message:errorDescription];
-            }];
-        }
-    }
+    self.baseUrl.text = value;
+//    NSString *protocolLogin = [[NCBrandOptions sharedInstance].webLoginAutenticationProtocol stringByAppendingString:@"login/"];
+//
+//    if (value != nil && [value hasPrefix:protocolLogin] && [value containsString:@"user:"] && [value containsString:@"password:"] && [value containsString:@"server:"]) {
+//
+//        value = [value stringByReplacingOccurrencesOfString:protocolLogin withString:@""];
+//
+//        NSArray *valueArray = [value componentsSeparatedByString: @"&"];
+//
+//        if (valueArray.count == 3) {
+//
+//            _imageUser.hidden = NO;
+//            _user.hidden = NO;
+//            _imagePassword.hidden = NO;
+//            _password.hidden = NO;
+//
+//            [self.loginTypeView setTitle:NSLocalizedString(@"_web_login_", nil) forState:UIControlStateNormal];
+//
+//            self.user.text = [valueArray[0] stringByReplacingOccurrencesOfString:@"user:" withString:@""];
+//            self.password.text = [valueArray[1] stringByReplacingOccurrencesOfString:@"password:" withString:@""];
+//            self.baseUrl.text = [valueArray[2] stringByReplacingOccurrencesOfString:@"server:" withString:@""];
+//
+//            // Check whether baseUrl contain protocol. If not add https:// by default.
+//            if(![self.baseUrl.text hasPrefix:@"https"] && ![self.baseUrl.text hasPrefix:@"http"]) {
+//                self.baseUrl.text = [NSString stringWithFormat:@"https://%@",self.baseUrl.text];
+//            }
+//
+//            NSString *url = self.baseUrl.text;
+//            NSString *user = self.user.text;
+//            NSString *token = self.password.text;
+//
+//            self.login.enabled = NO;
+//            [self.activity startAnimating];
+//
+//            NSString *webDAV = [[NCUtility shared] getWebDAVWithAccount:appDelegate.account];
+//            NSString *serverUrl = [NSString stringWithFormat:@"%@/%@", url, webDAV];
+//
+//            [[NCCommunication shared] checkServerWithServerUrl:serverUrl completionHandler:^(NSInteger errorCode, NSString *errorDescription) {
+//
+//                [self.activity stopAnimating];
+//                self.login.enabled = YES;
+//
+//                [self AfterLoginWithUrl:url user:user token:token errorCode:errorCode message:errorDescription];
+//            }];
+//        }
+//    }
 }
 
 #pragma --------------------------------------------------------------------------------------------

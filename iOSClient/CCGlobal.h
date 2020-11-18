@@ -105,7 +105,7 @@
 
 // Service Key Share
 #define k_serviceShareKeyChain                          @"Crypto Cloud"
-#define k_metadataKeyedUnarchiver                       @"it.twsweb.nextcloud.metadata"
+#define k_metadataKeyedUnarchiver                       @"com.qijicloud.client.metadata"
 
 // Metadata : Status
 //
