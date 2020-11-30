@@ -157,6 +157,8 @@ class NCCollectionViewCommon: UIViewController, UIGestureRecognizerDelegate, UIS
         NotificationCenter.default.addObserver(self, selector: #selector(triggerProgressTask(_:)), name: NSNotification.Name(rawValue: k_notificationCenter_progressTask), object:nil)
 
         changeTheming()
+        
+        
     }
         
     override func viewWillAppear(_ animated: Bool) {

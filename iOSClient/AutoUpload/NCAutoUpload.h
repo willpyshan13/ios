@@ -31,6 +31,8 @@
 
 + (NCAutoUpload *)sharedInstance;
 
+@property (assign, nonatomic, readonly) BOOL autoUploadBackground;
+
 - (void)initStateAutoUpload;
 - (BOOL)checkIfLocationIsEnabled;
 - (void)setupAutoUploadFull;

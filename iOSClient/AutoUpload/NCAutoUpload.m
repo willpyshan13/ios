@@ -74,6 +74,19 @@
     }
 }
 
+- (BOOL)autoUploadBackground {
+    tableAccount *account = [[NCManageDatabase sharedInstance] getAccountActive];
+    
+    if (account.autoUpload) {
+        
+        if (account.autoUploadBackground) {
+            return YES;
+        }
+        
+    }
+    return NO;
+}
+
 #pragma --------------------------------------------------------------------------------------------
 #pragma mark === Camera Upload & Full ===
 #pragma --------------------------------------------------------------------------------------------

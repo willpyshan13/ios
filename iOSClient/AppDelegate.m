@@ -27,10 +27,16 @@
 #import "NCAutoUpload.h"
 #import "NCPushNotificationEncryption.h"
 #import <QuartzCore/QuartzCore.h>
+#import <Photos/Photos.h>
+#import <AVFoundation/AVFoundation.h>
+#import "ZVGlobalData.h"
 
 @class NCViewerRichdocument;
 
-@interface AppDelegate() <TOPasscodeViewControllerDelegate>
+@interface AppDelegate() <TOPasscodeViewControllerDelegate,PHPhotoLibraryChangeObserver,AVAudioPlayerDelegate>
+
+@property(nonatomic,strong) AVAudioPlayer *audioPlayer;
+
 @end
 
 @implementation AppDelegate
@@ -42,6 +48,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    //网络监听
+    [ZVGlobalData shared];
+    
     BOOL isSimulatorOrTestFlight = [[NCUtility shared] isSimulatorOrTestFlight];
     
     if (isSimulatorOrTestFlight) {
@@ -177,9 +187,11 @@
     
     // Auto upload
     self.networkingAutoUpload = [NCNetworkingAutoUpload new];
-    
-    [[NCCommunicationCommon shared] writeLog:@"Application did finish launching"];
+    //监听相册更新
+    [[PHPhotoLibrary sharedPhotoLibrary] registerChangeObserver:self];
 
+    [[NCCommunicationCommon shared] writeLog:@"Application did finish launching"];
+//    [self playVoiceBackground];
     return YES;
 }
 
@@ -207,6 +219,9 @@
 //
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
+    
+    [self playVoiceEnterground];
+    
     if (self.account.length == 0 || self.maintenanceMode) { return; }
     
     [[NSNotificationCenter defaultCenter] postNotificationOnMainThreadName:k_notificationCenter_applicationWillEnterForeground object:nil];
@@ -232,6 +247,8 @@
     });
     
     [[NCCommunicationCommon shared] writeLog:@"The application Will enter in foreground"];
+    
+
 }
 
 //
@@ -261,6 +278,7 @@
 //
 // L' applicazione è entrata nello sfondo
 //
+
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
     if (self.account.length == 0 || self.maintenanceMode) { return; }
@@ -268,6 +286,9 @@
     [[NSNotificationCenter defaultCenter] postNotificationOnMainThreadName:k_notificationCenter_applicationDidEnterBackground object:nil];
     
     [self passcodeWithAutomaticallyPromptForBiometricValidation:false];
+    
+//    [[NCKeepBGRunManager shareManager] startBGRun];
+    [self playVoiceBackground];
 }
 
 //
@@ -276,6 +297,72 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     [[NCCommunicationCommon shared] writeLog:@"bye bye"];
+}
+
+- (void)playVoiceEnterground {
+    if (self.audioPlayer) {
+        [self.audioPlayer stop];
+        self.audioPlayer.delegate = self;
+        self.audioPlayer = nil;
+    }
+}
+- (void)playVoiceBackground {
+//    dispatch_queue_t dispatchQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//
+//    dispatch_async(dispatchQueue, ^(void) {
+    
+    
+    [NCCommunicationCommon shared];
+        
+    if ([NCAutoUpload sharedInstance].autoUploadBackground) {
+        
+        NSError *audioSessionError = nil;
+        
+        AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+        
+        if ([audioSession setCategory:AVAudioSessionCategoryPlayback error:&audioSessionError]){
+            
+            NSLog(@"Successfully set the audio session.");
+            
+        } else {
+            
+            NSLog(@"Could not set the audio session");
+            
+        }
+        
+        NSBundle *mainBundle = [NSBundle mainBundle];
+        NSString *filePath = [mainBundle pathForResource:@"noVoice" ofType:@"mp3"];
+        NSData *fileData = [NSData dataWithContentsOfFile:filePath];
+        NSError *error = nil;
+        
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithData:fileData error:&error];
+        
+        if (self.audioPlayer != nil){
+            
+            self.audioPlayer.delegate = self;
+            
+            [self.audioPlayer setNumberOfLoops:-1];
+            
+            if ([self.audioPlayer prepareToPlay] && [self.audioPlayer play]){
+                
+                NSLog(@"Successfully started playing...");
+                
+            } else {
+                
+                NSLog(@"Failed to play.");
+                
+            }
+            
+        }
+    }
+        
+}
+
+- (void)photoLibraryDidChange:(PHChange *)changeInstance {
+    // Auto upload Background
+    if ([NCAutoUpload sharedInstance].autoUploadBackground) {
+        [[NCAutoUpload sharedInstance] initStateAutoUpload];
+    }
 }
 
 // NotificationCenter
@@ -521,6 +608,7 @@
     [[NCCommunicationCommon shared] setupWithWebDav:[[NCUtility shared] getWebDAVWithAccount:account]];
     [[NCCommunicationCommon shared] setupWithDav:[[NCUtility shared] getDAV]];
 }
+
 
 #pragma --------------------------------------------------------------------------------------------
 #pragma mark ===== Push Notifications =====
@@ -1276,6 +1364,18 @@
 - (void)maintenanceMode:(BOOL)mode
 {
     self.maintenanceMode = mode;
+}
+
+- (NSString *)urlBase {
+    if (self.currentNetworkStatus == ReachableViaWiFi) {
+        if (self.isOK && self.wifiUrlIp.length > 0) {
+            
+//            NSLog(@"使用wifi ip ------------");
+            
+            return self.wifiUrlIp;
+        }
+    }
+    return _urlBase;
 }
 
 @end

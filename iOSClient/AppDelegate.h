@@ -32,6 +32,8 @@
 #import "CCSettings.h"
 #import "CCLogin.h"
 
+#import "Reachability.h"
+
 @class NCFiles;
 @class NCFileViewInFolder;
 @class NCRecent;
@@ -131,6 +133,12 @@
 // Network Auto Upload
 @property (nonatomic, strong) NCNetworkingAutoUpload *networkingAutoUpload;
 
+// net status
+@property (assign, nonatomic) NetworkStatus currentNetworkStatus;
+
+@property (copy, nonatomic) NSString *wifiUrlIp;
+@property (assign, nonatomic) BOOL isOK;
+
 // Login
 - (void)startTimerErrorNetworking;
 - (void)openLoginView:(UIViewController *)viewController selector:(NSInteger)selector openLoginWeb:(BOOL)openLoginWeb;
@@ -156,6 +164,8 @@
 
 // Maintenance Mode
 - (void)maintenanceMode:(BOOL)mode;
+
+
 
 @end
 

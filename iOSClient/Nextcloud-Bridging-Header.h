@@ -11,3 +11,5 @@
 #import "PKStopDownloadButton.h"
 #import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
 #import "CCPeekPop.h"
+#import "NCSwitchWifiIp.h"
+#import "ZVGlobalData.h"
