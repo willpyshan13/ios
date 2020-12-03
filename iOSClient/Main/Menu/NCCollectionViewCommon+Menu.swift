@@ -66,7 +66,7 @@ extension NCCollectionViewCommon {
         if let metadataFolder = metadataFolder {
             let isShare = metadata.permissions.contains(k_permission_shared) && !metadataFolder.permissions.contains(k_permission_shared)
             let isMounted = metadata.permissions.contains(k_permission_mounted) && !metadataFolder.permissions.contains(k_permission_mounted)
-            if isShare || isMounted {
+            if isMounted {
                 titleDelete = NSLocalizedString("_leave_share_", comment: "")
             }
         }
