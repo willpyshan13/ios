@@ -45,14 +45,14 @@ import UIKit
         return instance
     }()
     
-    @objc public var brand:                             String = "Nextcloud"
-    @objc public var mailMe:                            String = "ios@nextcloud.com"
-    @objc public var textCopyrightNextcloudiOS:         String = "Nextcloud Coherence for iOS %@ © 2020"
-    @objc public var textCopyrightNextcloudServer:      String = "Nextcloud Server %@"
-    @objc public var loginBaseUrl:                      String = "https://cloud.nextcloud.com"
-    @objc public var pushNotificationServerProxy:       String = "https://push-notifications.nextcloud.com"
-    @objc public var linkLoginHost:                     String = "https://nextcloud.com/install"
-    @objc public var linkloginPreferredProviders:       String = "https://nextcloud.com/signup";
+    @objc public var brand:                             String = "Qijicloud"
+    @objc public var mailMe:                            String = "ios@qijicloud.com"
+    @objc public var textCopyrightNextcloudiOS:         String = "Qijicloud Coherence for iOS %@ © 2020"
+    @objc public var textCopyrightNextcloudServer:      String = "Qijicloud Server %@"
+    @objc public var loginBaseUrl:                      String = "https://cloud.qijicloud.com"
+    @objc public var pushNotificationServerProxy:       String = "https://push-notifications.qijicloud.com"
+    @objc public var linkLoginHost:                     String = "https://qijicloud.com/install"
+    @objc public var linkloginPreferredProviders:       String = "https://qijicloud.com/signup";
     @objc public var webLoginAutenticationProtocol:     String = "nc://"                                            // example "abc://"
     // Personalized
     @objc public var webCloseViewProtocolPersonalized:  String = ""                                                 // example "abc://change/plan"      Don't touch me !!
@@ -65,7 +65,7 @@ import UIKit
     @objc public var capabilitiesGroups:                String = "group.com.qijicloud.client.Crypto-Cloud"
     
     // User Agent
-    @objc public var userAgent:                         String = "Nextcloud-iOS"                                    // Don't touch me !!
+    @objc public var userAgent:                         String = "Qijicloud-iOS"                                    // Don't touch me !!
     
     // Options
     @objc public var use_login_web_personalized:        Bool = false                                                // Don't touch me !!

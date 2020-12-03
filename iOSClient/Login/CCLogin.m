@@ -75,7 +75,7 @@
     }
     
     // Image Brand
-    self.imageBrand.image = [UIImage imageNamed:@"logo"];
+    self.imageBrand.image = [UIImage imageNamed:@"logo1"];
     
     // Annulla
     cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(handleAnnulla:)];

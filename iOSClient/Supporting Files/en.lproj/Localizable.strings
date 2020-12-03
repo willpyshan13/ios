@@ -93,7 +93,7 @@
 "_save_path_"               = "Save path";
 "_save_settings_"           = "Save settings";
 "_mode_filename_"           = "Filename mode";
-"_warning_owncloud_"        = "You are connected to an ownCloud server. This is untested and unsupported, use at your own risk. To upgrade to Nextcloud, see https://nextcloud.com/migration";
+"_warning_owncloud_"        = "You are connected to an ownCloud server. This is untested and unsupported, use at your own risk. To upgrade to Qijicloud, see https://qijicloud.com/migration";
 "_warning_unsupported_"     = "You are using an unsupported version of Nextcloud. For the safety of your data we strongly recommend updating to the latest stable Nextcloud";
 "_restore_"                 = "Restore";
 "_camera_roll_"             = "Camera roll";
@@ -297,7 +297,7 @@
 "_format_compatibility_"        = "Most Compatible";
 "_format_compatibility_footer_" = "\"Most compatible\" will save, when possible, photos as JPEG";
 "_privacy_"                     = "Privacy";
-"_privacy_footer_"              = "Nextcloud iOS uses a service for the analysis of a crash. Your personal information is not sent with the report. If you want disable it, please change the setting \"Disable crash reporter\" to ON";
+"_privacy_footer_"              = "Qijicloud iOS uses a service for the analysis of a crash. Your personal information is not sent with the report. If you want disable it, please change the setting \"Disable crash reporter\" to ON";
 "_crashservice_title_"          = "Disable crash reporter";
 "_crashservice_alert_"          = "This option requires a restart of the app to take effect";
 "_upload_mov_livephoto_"        = "Live Photo";
@@ -315,7 +315,7 @@
 "_connect_server_anyway_"       = "Do you want to connect to the server anyway?";
 "_connection_error_"            = "Connection error";
 "_serverstatus_error_"          = "Connection to server failure, verify your server address or network status";
-"_add_your_nextcloud_"          = "Add your Nextcloud account";
+"_add_your_nextcloud_"          = "Add your Qijicloud account";
 "_login_url_"                   = "Server address https://…";
 "_login_bottom_label_"          = "Don't have a server yet?\nChoose one of the providers.";
 "_error_multidomain_"           = "Address not allowed, only the following domains are valid:";
@@ -797,7 +797,7 @@
 "_webdav_locked_"                       = "WebDAV Locked: Trying to access locked resource";
 "_error_user_not_available_"            = "The user is no longer available";
 "_server_response_error_"               = "Server response content error";
-"_no_nextcloud_found_"                  = "Nextcloud server not found";
+"_no_nextcloud_found_"                  = "Qijicloud server not found";
 "_error_decompressing_"                 = "Error during decompressing. Unknown compression method or the file is corrupt";
 "_error_json_decoding_"                 = "Serious internal error in decoding metadata (The data couldn’t be read because it isn’t in the correct format.)";
 "_error_check_remote_user_"             = "Server responded with error, password re-entry is required";

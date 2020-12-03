@@ -55,6 +55,8 @@ class NCShareComments: UIViewController, NCShareCommentsCellDelegate {
 
         newCommentField.placeholder = NSLocalizedString("_new_comment_", comment: "")
         
+        newCommentField.returnKeyType = .done
+        
         // Display Name user & Quota
         guard let tabAccount = NCManageDatabase.sharedInstance.getAccountActive() else {
             return

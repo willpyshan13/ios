@@ -32,7 +32,7 @@ class NotificationService: UNNotificationServiceExtension {
         
         if let bestAttemptContent = bestAttemptContent {
             bestAttemptContent.title = ""
-            bestAttemptContent.body = "Nextcloud notification"
+            bestAttemptContent.body = "Qijicloud notification"
             do {
                 let message = bestAttemptContent.userInfo["subject"] as! String
                 let tableAccounts = NCManageDatabase.sharedInstance.getAllAccount()
@@ -64,7 +64,7 @@ class NotificationService: UNNotificationServiceExtension {
         // Use this as an opportunity to deliver your "best attempt" at modified content, otherwise the original push payload will be used.
         if let contentHandler = contentHandler, let bestAttemptContent =  bestAttemptContent {
             bestAttemptContent.title = ""
-            bestAttemptContent.body = "Nextcloud notification"
+            bestAttemptContent.body = "Qijicloud notification"
             contentHandler(bestAttemptContent)
         }
     }

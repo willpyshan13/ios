@@ -48,7 +48,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
     //网络监听
     [ZVGlobalData shared];
     
@@ -394,7 +393,7 @@
     [[NCAutoUpload sharedInstance] initStateAutoUpload];
     
     // Start services
-    [[NCCommunicationCommon shared] writeLog:@"Request Service Server Nextcloud"];
+    [[NCCommunicationCommon shared] writeLog:@"Request Service Server Qijicloud"];
     [[NCService shared] startRequestServicesServer];
     
     // Registeration push notification
@@ -1158,7 +1157,7 @@
     NSString *fileName;
     NSString *serverUrl;
 
-    if ([scheme isEqualToString:@"nextcloud"]) {
+    if ([scheme isEqualToString:@"qijicloud"]) {
                 
         NSString *action = url.host;
         if ([action isEqualToString:@"open-file"]) {

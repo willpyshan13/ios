@@ -58,7 +58,7 @@
 			<string>com.qijicloud.client</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>nextcloud</string>
+				<string>qijicloud</string>
 			</array>
 		</dict>
 	</array>
