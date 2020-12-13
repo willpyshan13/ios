@@ -24,7 +24,7 @@
 import Foundation
 import Parchment
 import DropDown
-import NCCommunication
+//mport NCCommunication
 
 class NCShare: UIViewController, UIGestureRecognizerDelegate, NCShareLinkCellDelegate, NCShareUserCellDelegate, NCShareNetworkingDelegate {
    

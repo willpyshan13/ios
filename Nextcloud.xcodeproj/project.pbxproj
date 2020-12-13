@@ -13,10 +13,101 @@
 		2C33C48223E2C475005F963B /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C33C48123E2C475005F963B /* NotificationService.swift */; };
 		2C33C48623E2C475005F963B /* Notification Service Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2C33C47F23E2C475005F963B /* Notification Service Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2CB7D1CA23E2EDCB00376EF9 /* NCPushNotificationEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = F72D1005210B6882009C96B7 /* NCPushNotificationEncryption.m */; };
+		32003E082584F2D400B31FD1 /* NCFileDocumentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32003E062584F2D400B31FD1 /* NCFileDocumentCell.xib */; };
+		32003E092584F2D400B31FD1 /* NCFileDocumentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32003E072584F2D400B31FD1 /* NCFileDocumentCell.swift */; };
+		3203D44F2583B0FB00DD2DC0 /* NCCommunication+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D43F2583B0FB00DD2DC0 /* NCCommunication+API.swift */; };
+		3203D4502583B0FB00DD2DC0 /* NCCommunication+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D43F2583B0FB00DD2DC0 /* NCCommunication+API.swift */; };
+		3203D4512583B0FB00DD2DC0 /* NCCommunication+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D43F2583B0FB00DD2DC0 /* NCCommunication+API.swift */; };
+		3203D4522583B0FB00DD2DC0 /* NCCommunication+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D43F2583B0FB00DD2DC0 /* NCCommunication+API.swift */; };
+		3203D4532583B0FB00DD2DC0 /* NCCommunication+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4402583B0FB00DD2DC0 /* NCCommunication+Login.swift */; };
+		3203D4542583B0FB00DD2DC0 /* NCCommunication+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4402583B0FB00DD2DC0 /* NCCommunication+Login.swift */; };
+		3203D4552583B0FB00DD2DC0 /* NCCommunication+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4402583B0FB00DD2DC0 /* NCCommunication+Login.swift */; };
+		3203D4562583B0FB00DD2DC0 /* NCCommunication+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4402583B0FB00DD2DC0 /* NCCommunication+Login.swift */; };
+		3203D4572583B0FB00DD2DC0 /* NCCommunication+NCText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4412583B0FB00DD2DC0 /* NCCommunication+NCText.swift */; };
+		3203D4582583B0FB00DD2DC0 /* NCCommunication+NCText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4412583B0FB00DD2DC0 /* NCCommunication+NCText.swift */; };
+		3203D4592583B0FB00DD2DC0 /* NCCommunication+NCText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4412583B0FB00DD2DC0 /* NCCommunication+NCText.swift */; };
+		3203D45A2583B0FB00DD2DC0 /* NCCommunication+NCText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4412583B0FB00DD2DC0 /* NCCommunication+NCText.swift */; };
+		3203D45B2583B0FB00DD2DC0 /* NCCommunication+E2EE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4422583B0FB00DD2DC0 /* NCCommunication+E2EE.swift */; };
+		3203D45C2583B0FB00DD2DC0 /* NCCommunication+E2EE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4422583B0FB00DD2DC0 /* NCCommunication+E2EE.swift */; };
+		3203D45D2583B0FB00DD2DC0 /* NCCommunication+E2EE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4422583B0FB00DD2DC0 /* NCCommunication+E2EE.swift */; };
+		3203D45E2583B0FB00DD2DC0 /* NCCommunication+E2EE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4422583B0FB00DD2DC0 /* NCCommunication+E2EE.swift */; };
+		3203D45F2583B0FB00DD2DC0 /* NCCommunication+PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4442583B0FB00DD2DC0 /* NCCommunication+PushNotification.swift */; };
+		3203D4602583B0FB00DD2DC0 /* NCCommunication+PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4442583B0FB00DD2DC0 /* NCCommunication+PushNotification.swift */; };
+		3203D4612583B0FB00DD2DC0 /* NCCommunication+PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4442583B0FB00DD2DC0 /* NCCommunication+PushNotification.swift */; };
+		3203D4622583B0FB00DD2DC0 /* NCCommunication+PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4442583B0FB00DD2DC0 /* NCCommunication+PushNotification.swift */; };
+		3203D4632583B0FB00DD2DC0 /* NCCommunicationBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4452583B0FB00DD2DC0 /* NCCommunicationBackground.swift */; };
+		3203D4642583B0FB00DD2DC0 /* NCCommunicationBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4452583B0FB00DD2DC0 /* NCCommunicationBackground.swift */; };
+		3203D4652583B0FB00DD2DC0 /* NCCommunicationBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4452583B0FB00DD2DC0 /* NCCommunicationBackground.swift */; };
+		3203D4662583B0FB00DD2DC0 /* NCCommunicationBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4452583B0FB00DD2DC0 /* NCCommunicationBackground.swift */; };
+		3203D4672583B0FB00DD2DC0 /* NCCommunicationCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4462583B0FB00DD2DC0 /* NCCommunicationCommon.swift */; };
+		3203D4682583B0FB00DD2DC0 /* NCCommunicationCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4462583B0FB00DD2DC0 /* NCCommunicationCommon.swift */; };
+		3203D4692583B0FB00DD2DC0 /* NCCommunicationCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4462583B0FB00DD2DC0 /* NCCommunicationCommon.swift */; };
+		3203D46A2583B0FB00DD2DC0 /* NCCommunicationCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4462583B0FB00DD2DC0 /* NCCommunicationCommon.swift */; };
+		3203D46B2583B0FC00DD2DC0 /* NCCommunication+WebDAV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4472583B0FB00DD2DC0 /* NCCommunication+WebDAV.swift */; };
+		3203D46C2583B0FC00DD2DC0 /* NCCommunication+WebDAV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4472583B0FB00DD2DC0 /* NCCommunication+WebDAV.swift */; };
+		3203D46D2583B0FC00DD2DC0 /* NCCommunication+WebDAV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4472583B0FB00DD2DC0 /* NCCommunication+WebDAV.swift */; };
+		3203D46E2583B0FC00DD2DC0 /* NCCommunication+WebDAV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4472583B0FB00DD2DC0 /* NCCommunication+WebDAV.swift */; };
+		3203D46F2583B0FC00DD2DC0 /* NCCommunication+Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4482583B0FB00DD2DC0 /* NCCommunication+Comments.swift */; };
+		3203D4702583B0FC00DD2DC0 /* NCCommunication+Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4482583B0FB00DD2DC0 /* NCCommunication+Comments.swift */; };
+		3203D4712583B0FC00DD2DC0 /* NCCommunication+Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4482583B0FB00DD2DC0 /* NCCommunication+Comments.swift */; };
+		3203D4722583B0FC00DD2DC0 /* NCCommunication+Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4482583B0FB00DD2DC0 /* NCCommunication+Comments.swift */; };
+		3203D4732583B0FC00DD2DC0 /* NCCommunicationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4492583B0FB00DD2DC0 /* NCCommunicationError.swift */; };
+		3203D4742583B0FC00DD2DC0 /* NCCommunicationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4492583B0FB00DD2DC0 /* NCCommunicationError.swift */; };
+		3203D4752583B0FC00DD2DC0 /* NCCommunicationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4492583B0FB00DD2DC0 /* NCCommunicationError.swift */; };
+		3203D4762583B0FC00DD2DC0 /* NCCommunicationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4492583B0FB00DD2DC0 /* NCCommunicationError.swift */; };
+		3203D4772583B0FC00DD2DC0 /* NCCommunicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D44A2583B0FB00DD2DC0 /* NCCommunicationModel.swift */; };
+		3203D4782583B0FC00DD2DC0 /* NCCommunicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D44A2583B0FB00DD2DC0 /* NCCommunicationModel.swift */; };
+		3203D4792583B0FC00DD2DC0 /* NCCommunicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D44A2583B0FB00DD2DC0 /* NCCommunicationModel.swift */; };
+		3203D47A2583B0FC00DD2DC0 /* NCCommunicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D44A2583B0FB00DD2DC0 /* NCCommunicationModel.swift */; };
+		3203D47B2583B0FC00DD2DC0 /* NCCommunication+Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D44B2583B0FB00DD2DC0 /* NCCommunication+Share.swift */; };
+		3203D47C2583B0FC00DD2DC0 /* NCCommunication+Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D44B2583B0FB00DD2DC0 /* NCCommunication+Share.swift */; };
+		3203D47D2583B0FC00DD2DC0 /* NCCommunication+Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D44B2583B0FB00DD2DC0 /* NCCommunication+Share.swift */; };
+		3203D47E2583B0FC00DD2DC0 /* NCCommunication+Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D44B2583B0FB00DD2DC0 /* NCCommunication+Share.swift */; };
+		3203D47F2583B0FC00DD2DC0 /* NCCommunication+GetShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D44C2583B0FB00DD2DC0 /* NCCommunication+GetShare.swift */; };
+		3203D4802583B0FC00DD2DC0 /* NCCommunication+GetShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D44C2583B0FB00DD2DC0 /* NCCommunication+GetShare.swift */; };
+		3203D4812583B0FC00DD2DC0 /* NCCommunication+GetShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D44C2583B0FB00DD2DC0 /* NCCommunication+GetShare.swift */; };
+		3203D4822583B0FC00DD2DC0 /* NCCommunication+GetShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D44C2583B0FB00DD2DC0 /* NCCommunication+GetShare.swift */; };
+		3203D4832583B0FC00DD2DC0 /* NCCommunication+Richdocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D44D2583B0FB00DD2DC0 /* NCCommunication+Richdocuments.swift */; };
+		3203D4842583B0FC00DD2DC0 /* NCCommunication+Richdocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D44D2583B0FB00DD2DC0 /* NCCommunication+Richdocuments.swift */; };
+		3203D4852583B0FC00DD2DC0 /* NCCommunication+Richdocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D44D2583B0FB00DD2DC0 /* NCCommunication+Richdocuments.swift */; };
+		3203D4862583B0FC00DD2DC0 /* NCCommunication+Richdocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D44D2583B0FB00DD2DC0 /* NCCommunication+Richdocuments.swift */; };
+		3203D4872583B0FC00DD2DC0 /* NCCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D44E2583B0FB00DD2DC0 /* NCCommunication.swift */; };
+		3203D4882583B0FC00DD2DC0 /* NCCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D44E2583B0FB00DD2DC0 /* NCCommunication.swift */; };
+		3203D4892583B0FC00DD2DC0 /* NCCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D44E2583B0FB00DD2DC0 /* NCCommunication.swift */; };
+		3203D48A2583B0FC00DD2DC0 /* NCCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D44E2583B0FB00DD2DC0 /* NCCommunication.swift */; };
+		3203D4902583B16900DD2DC0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3203D48F2583B16900DD2DC0 /* Alamofire */; };
+		3203D4962583B23900DD2DC0 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3203D4952583B23900DD2DC0 /* SwiftyJSON */; };
+		3203D49C2583B2A900DD2DC0 /* SwiftyXMLParser in Frameworks */ = {isa = PBXBuildFile; productRef = 3203D49B2583B2A900DD2DC0 /* SwiftyXMLParser */; };
+		3203D4A12583B32E00DD2DC0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3203D4A02583B32E00DD2DC0 /* Alamofire */; };
+		3203D4A32583B32E00DD2DC0 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3203D4A22583B32E00DD2DC0 /* SwiftyJSON */; };
+		3203D4A52583B32E00DD2DC0 /* SwiftyXMLParser in Frameworks */ = {isa = PBXBuildFile; productRef = 3203D4A42583B32E00DD2DC0 /* SwiftyXMLParser */; };
+		3203D4A72583B33800DD2DC0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3203D4A62583B33800DD2DC0 /* Alamofire */; };
+		3203D4A92583B33800DD2DC0 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3203D4A82583B33800DD2DC0 /* SwiftyJSON */; };
+		3203D4AB2583B33800DD2DC0 /* SwiftyXMLParser in Frameworks */ = {isa = PBXBuildFile; productRef = 3203D4AA2583B33800DD2DC0 /* SwiftyXMLParser */; };
+		3203D4AD2583B33F00DD2DC0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3203D4AC2583B33F00DD2DC0 /* Alamofire */; };
+		3203D4AF2583B33F00DD2DC0 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3203D4AE2583B33F00DD2DC0 /* SwiftyJSON */; };
+		3203D4B12583B33F00DD2DC0 /* SwiftyXMLParser in Frameworks */ = {isa = PBXBuildFile; productRef = 3203D4B02583B33F00DD2DC0 /* SwiftyXMLParser */; };
+		3203D4C42584C94300DD2DC0 /* NCMyFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4C32584C94300DD2DC0 /* NCMyFiles.swift */; };
+		3203D4D22584E46900DD2DC0 /* NCSectionNoneHeaderMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3203D4D12584E46900DD2DC0 /* NCSectionNoneHeaderMenu.xib */; };
+		3203D4D32584E46900DD2DC0 /* NCSectionNoneHeaderMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3203D4D12584E46900DD2DC0 /* NCSectionNoneHeaderMenu.xib */; };
+		3203D4D42584E46900DD2DC0 /* NCSectionNoneHeaderMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3203D4D12584E46900DD2DC0 /* NCSectionNoneHeaderMenu.xib */; };
+		3203D4D52584E46900DD2DC0 /* NCSectionNoneHeaderMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3203D4D12584E46900DD2DC0 /* NCSectionNoneHeaderMenu.xib */; };
+		3203D4DA2584E61000DD2DC0 /* NCMyCommonSpaceFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4D92584E61000DD2DC0 /* NCMyCommonSpaceFiles.swift */; };
+		3203D4DF2584E67F00DD2DC0 /* NCMyCommonSpaceFiles.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3203D4DE2584E67F00DD2DC0 /* NCMyCommonSpaceFiles.storyboard */; };
+		3203D4E42584E7D000DD2DC0 /* NCSectionNoneHeaderMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203D4E32584E7D000DD2DC0 /* NCSectionNoneHeaderMenu.swift */; };
 		322F2D8B2571ED4300149662 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 322F2D8D2571ED4300149662 /* InfoPlist.strings */; };
 		322F2DEF25724E0D00149662 /* noVoice.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 322F2DEE25724E0D00149662 /* noVoice.mp3 */; };
 		324EBAB62573663F00D1D80F /* ZVGlobalData.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EBAB52573663F00D1D80F /* ZVGlobalData.m */; };
 		324EBABE25736AA800D1D80F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 324EBABD25736AA700D1D80F /* Reachability.m */; };
+		324FC85B2585A43A00D91807 /* NCDocumentShares.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 324FC85A2585A43A00D91807 /* NCDocumentShares.storyboard */; };
+		324FC8602585A49B00D91807 /* NCDocumentShares.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FC85F2585A49B00D91807 /* NCDocumentShares.swift */; };
+		3250981825863A090033784A /* NCShareDocumentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3250981625863A090033784A /* NCShareDocumentCell.swift */; };
+		3250981925863A090033784A /* NCShareDocumentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3250981725863A090033784A /* NCShareDocumentCell.xib */; };
+		3256F813257C80CD00DC1C34 /* QJLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3256F811257C80CD00DC1C34 /* QJLoginVC.m */; };
+		3256F814257C80CD00DC1C34 /* QJLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3256F812257C80CD00DC1C34 /* QJLoginVC.xib */; };
+		3256F81A257C8BE000DC1C34 /* MBProgressHUD+ShowToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 3256F819257C8BE000DC1C34 /* MBProgressHUD+ShowToast.m */; };
+		3256F821257CBEAA00DC1C34 /* QJForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3256F81E257CBEA900DC1C34 /* QJForgotPasswordVC.xib */; };
+		3256F822257CBEAA00DC1C34 /* QJForgotPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3256F81F257CBEAA00DC1C34 /* QJForgotPasswordVC.m */; };
 		32F8657C2572798F0046A864 /* NCSwitchWifiIp.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F8657B2572798F0046A864 /* NCSwitchWifiIp.m */; };
 		3704EB2A23D5A58400455C5B /* NCMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3704EB2923D5A58400455C5B /* NCMenu.storyboard */; };
 		370D26AF248A3D7A00121797 /* NCImageCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370D26AE248A3D7A00121797 /* NCImageCellProtocol.swift */; };
@@ -219,10 +310,6 @@
 		F785EEA42461A4A600B3F945 /* NCUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70BFC7320E0FA7C00C67599 /* NCUtility.swift */; };
 		F785EEA52461A4CF00B3F945 /* CCUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = F7053E3D1C639DF500741EA5 /* CCUtility.m */; };
 		F785EEA62461A4FB00B3F945 /* CCUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = F7053E3D1C639DF500741EA5 /* CCUtility.m */; };
-		F786D58D253454BF00E3DD7B /* NCCommunication in Frameworks */ = {isa = PBXBuildFile; productRef = F786D58C253454BF00E3DD7B /* NCCommunication */; };
-		F786D593253454CE00E3DD7B /* NCCommunication in Frameworks */ = {isa = PBXBuildFile; productRef = F786D592253454CE00E3DD7B /* NCCommunication */; };
-		F786D595253454D300E3DD7B /* NCCommunication in Frameworks */ = {isa = PBXBuildFile; productRef = F786D594253454D300E3DD7B /* NCCommunication */; };
-		F786D597253454D800E3DD7B /* NCCommunication in Frameworks */ = {isa = PBXBuildFile; productRef = F786D596253454D800E3DD7B /* NCCommunication */; };
 		F78A18B623CDD07D00F681F3 /* NCViewerRichWorkspaceWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78A18B523CDD07D00F681F3 /* NCViewerRichWorkspaceWebView.swift */; };
 		F78A18B823CDE2B300F681F3 /* NCViewerRichWorkspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78A18B723CDE2B300F681F3 /* NCViewerRichWorkspace.swift */; };
 		F78AA20621F783E900D0F205 /* SwiftRichString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F78AA20521F783E900D0F205 /* SwiftRichString.framework */; };
@@ -331,7 +418,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		325482BC25791D1800A44331 /* Embed Frameworks */ = {
+		3203D42B2582F7B400DD2DC0 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
@@ -365,6 +452,30 @@
 		2C33C47F23E2C475005F963B /* Notification Service Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Notification Service Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C33C48123E2C475005F963B /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		2C33C48A23E2CC26005F963B /* Notification_Service_Extension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Notification_Service_Extension-Bridging-Header.h"; sourceTree = "<group>"; };
+		32003E062584F2D400B31FD1 /* NCFileDocumentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NCFileDocumentCell.xib; sourceTree = "<group>"; };
+		32003E072584F2D400B31FD1 /* NCFileDocumentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NCFileDocumentCell.swift; sourceTree = "<group>"; };
+		3203D4352582F81A00DD2DC0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = iOSClient/NCCom/Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		3203D43F2583B0FB00DD2DC0 /* NCCommunication+API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NCCommunication+API.swift"; sourceTree = "<group>"; };
+		3203D4402583B0FB00DD2DC0 /* NCCommunication+Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NCCommunication+Login.swift"; sourceTree = "<group>"; };
+		3203D4412583B0FB00DD2DC0 /* NCCommunication+NCText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NCCommunication+NCText.swift"; sourceTree = "<group>"; };
+		3203D4422583B0FB00DD2DC0 /* NCCommunication+E2EE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NCCommunication+E2EE.swift"; sourceTree = "<group>"; };
+		3203D4432583B0FB00DD2DC0 /* NCCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCommunication.h; sourceTree = "<group>"; };
+		3203D4442583B0FB00DD2DC0 /* NCCommunication+PushNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NCCommunication+PushNotification.swift"; sourceTree = "<group>"; };
+		3203D4452583B0FB00DD2DC0 /* NCCommunicationBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NCCommunicationBackground.swift; sourceTree = "<group>"; };
+		3203D4462583B0FB00DD2DC0 /* NCCommunicationCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NCCommunicationCommon.swift; sourceTree = "<group>"; };
+		3203D4472583B0FB00DD2DC0 /* NCCommunication+WebDAV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NCCommunication+WebDAV.swift"; sourceTree = "<group>"; };
+		3203D4482583B0FB00DD2DC0 /* NCCommunication+Comments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NCCommunication+Comments.swift"; sourceTree = "<group>"; };
+		3203D4492583B0FB00DD2DC0 /* NCCommunicationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NCCommunicationError.swift; sourceTree = "<group>"; };
+		3203D44A2583B0FB00DD2DC0 /* NCCommunicationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NCCommunicationModel.swift; sourceTree = "<group>"; };
+		3203D44B2583B0FB00DD2DC0 /* NCCommunication+Share.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NCCommunication+Share.swift"; sourceTree = "<group>"; };
+		3203D44C2583B0FB00DD2DC0 /* NCCommunication+GetShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NCCommunication+GetShare.swift"; sourceTree = "<group>"; };
+		3203D44D2583B0FB00DD2DC0 /* NCCommunication+Richdocuments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NCCommunication+Richdocuments.swift"; sourceTree = "<group>"; };
+		3203D44E2583B0FB00DD2DC0 /* NCCommunication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NCCommunication.swift; sourceTree = "<group>"; };
+		3203D4C32584C94300DD2DC0 /* NCMyFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCMyFiles.swift; sourceTree = "<group>"; };
+		3203D4D12584E46900DD2DC0 /* NCSectionNoneHeaderMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NCSectionNoneHeaderMenu.xib; sourceTree = "<group>"; };
+		3203D4D92584E61000DD2DC0 /* NCMyCommonSpaceFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCMyCommonSpaceFiles.swift; sourceTree = "<group>"; };
+		3203D4DE2584E67F00DD2DC0 /* NCMyCommonSpaceFiles.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NCMyCommonSpaceFiles.storyboard; sourceTree = "<group>"; };
+		3203D4E32584E7D000DD2DC0 /* NCSectionNoneHeaderMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCSectionNoneHeaderMenu.swift; sourceTree = "<group>"; };
 		322F2D8C2571ED4300149662 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		322F2D8E2571ED4B00149662 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		322F2DEE25724E0D00149662 /* noVoice.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = noVoice.mp3; sourceTree = "<group>"; };
@@ -372,6 +483,18 @@
 		324EBAB52573663F00D1D80F /* ZVGlobalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZVGlobalData.m; sourceTree = "<group>"; };
 		324EBABC25736AA700D1D80F /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		324EBABD25736AA700D1D80F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		324FC85A2585A43A00D91807 /* NCDocumentShares.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NCDocumentShares.storyboard; sourceTree = "<group>"; };
+		324FC85F2585A49B00D91807 /* NCDocumentShares.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCDocumentShares.swift; sourceTree = "<group>"; };
+		3250981625863A090033784A /* NCShareDocumentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NCShareDocumentCell.swift; sourceTree = "<group>"; };
+		3250981725863A090033784A /* NCShareDocumentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NCShareDocumentCell.xib; sourceTree = "<group>"; };
+		3256F810257C80CD00DC1C34 /* QJLoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QJLoginVC.h; sourceTree = "<group>"; };
+		3256F811257C80CD00DC1C34 /* QJLoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QJLoginVC.m; sourceTree = "<group>"; };
+		3256F812257C80CD00DC1C34 /* QJLoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QJLoginVC.xib; sourceTree = "<group>"; };
+		3256F818257C8BE000DC1C34 /* MBProgressHUD+ShowToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+ShowToast.h"; sourceTree = "<group>"; };
+		3256F819257C8BE000DC1C34 /* MBProgressHUD+ShowToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+ShowToast.m"; sourceTree = "<group>"; };
+		3256F81E257CBEA900DC1C34 /* QJForgotPasswordVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJForgotPasswordVC.xib; sourceTree = "<group>"; };
+		3256F81F257CBEAA00DC1C34 /* QJForgotPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJForgotPasswordVC.m; sourceTree = "<group>"; };
+		3256F820257CBEAA00DC1C34 /* QJForgotPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJForgotPasswordVC.h; sourceTree = "<group>"; };
 		32F8657A2572798F0046A864 /* NCSwitchWifiIp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCSwitchWifiIp.h; sourceTree = "<group>"; };
 		32F8657B2572798F0046A864 /* NCSwitchWifiIp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCSwitchWifiIp.m; sourceTree = "<group>"; };
 		3704EB2923D5A58400455C5B /* NCMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NCMenu.storyboard; sourceTree = "<group>"; };
@@ -423,7 +546,6 @@
 		F7151A811D477A4B00E6AF45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F7169A301EE59BB70086BD69 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F7169A4C1EE59C640086BD69 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		F716FE7723795E5000FABE50 /* NCCommunication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NCCommunication.framework; path = Carthage/Build/iOS/NCCommunication.framework; sourceTree = "<group>"; };
 		F717402B24F699A5000C87D5 /* NCFavorite.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NCFavorite.storyboard; sourceTree = "<group>"; };
 		F717402C24F699A5000C87D5 /* NCFavorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NCFavorite.swift; sourceTree = "<group>"; };
 		F7226EDB1EE4089300EBECB1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -737,9 +859,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3203D4AD2583B33F00DD2DC0 /* Alamofire in Frameworks */,
 				F782A58D251236D1007BBABD /* RealmSwift in Frameworks */,
-				F786D597253454D800E3DD7B /* NCCommunication in Frameworks */,
+				3203D4AF2583B33F00DD2DC0 /* SwiftyJSON in Frameworks */,
 				F782A58B251236D1007BBABD /* Realm in Frameworks */,
+				3203D4B12583B33F00DD2DC0 /* SwiftyXMLParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -747,9 +871,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3203D4A12583B32E00DD2DC0 /* Alamofire in Frameworks */,
 				F782A585251236B7007BBABD /* RealmSwift in Frameworks */,
-				F786D593253454CE00E3DD7B /* NCCommunication in Frameworks */,
+				3203D4A32583B32E00DD2DC0 /* SwiftyJSON in Frameworks */,
 				F782A583251236B7007BBABD /* Realm in Frameworks */,
+				3203D4A52583B32E00DD2DC0 /* SwiftyXMLParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -757,9 +883,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3203D4A72583B33800DD2DC0 /* Alamofire in Frameworks */,
 				F782A589251236CA007BBABD /* RealmSwift in Frameworks */,
-				F786D595253454D300E3DD7B /* NCCommunication in Frameworks */,
+				3203D4A92583B33800DD2DC0 /* SwiftyJSON in Frameworks */,
 				F782A587251236CA007BBABD /* Realm in Frameworks */,
+				3203D4AB2583B33800DD2DC0 /* SwiftyXMLParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -776,19 +904,21 @@
 				F733B65221997CC2001C1FFA /* TLPhotoPicker.framework in Frameworks */,
 				F7AF7633246BEDFE00B86E3C /* TOPasscodeViewController.framework in Frameworks */,
 				F745B251222D871800346520 /* QRCodeReader.framework in Frameworks */,
+				3203D4902583B16900DD2DC0 /* Alamofire in Frameworks */,
+				3203D49C2583B2A900DD2DC0 /* SwiftyXMLParser in Frameworks */,
 				F765608723BF806D00765969 /* QuickLayout.framework in Frameworks */,
 				F72E0B9D21AD60BC00898D7B /* WeScan.framework in Frameworks */,
 				F7063DED2199E55F003F38DA /* SVGKit.framework in Frameworks */,
 				F7063DEF2199E568003F38DA /* CocoaLumberjack.framework in Frameworks */,
 				F765608B23BF80A400765969 /* SwiftEntryKit.framework in Frameworks */,
 				F7063DF12199E56F003F38DA /* CocoaLumberjackSwift.framework in Frameworks */,
-				F786D58D253454BF00E3DD7B /* NCCommunication in Frameworks */,
 				F7C40BEF219994ED0004137E /* KTVCocoaHTTPServer.framework in Frameworks */,
 				F782A57B25123694007BBABD /* Realm in Frameworks */,
 				F7C40BF1219994F20004137E /* KTVHTTPCache.framework in Frameworks */,
 				F774264122EB3F7300B23912 /* DropDown.framework in Frameworks */,
 				F78AA20621F783E900D0F205 /* SwiftRichString.framework in Frameworks */,
 				F7DBD82C23E46A4700ECB7C6 /* MarkdownKit.framework in Frameworks */,
+				3203D4962583B23900DD2DC0 /* SwiftyJSON in Frameworks */,
 				F74AFCE922E8B025003DE61F /* FSCalendar.framework in Frameworks */,
 				F7D2C773246470CA008513AE /* XLForm.framework in Frameworks */,
 				F782A57D25123694007BBABD /* RealmSwift in Frameworks */,
@@ -807,6 +937,29 @@
 				2C33C48A23E2CC26005F963B /* Notification_Service_Extension-Bridging-Header.h */,
 			);
 			path = "Notification Service Extension";
+			sourceTree = "<group>";
+		};
+		3203D43E2583B0FB00DD2DC0 /* NCCom */ = {
+			isa = PBXGroup;
+			children = (
+				3203D43F2583B0FB00DD2DC0 /* NCCommunication+API.swift */,
+				3203D4402583B0FB00DD2DC0 /* NCCommunication+Login.swift */,
+				3203D4412583B0FB00DD2DC0 /* NCCommunication+NCText.swift */,
+				3203D4422583B0FB00DD2DC0 /* NCCommunication+E2EE.swift */,
+				3203D4432583B0FB00DD2DC0 /* NCCommunication.h */,
+				3203D4442583B0FB00DD2DC0 /* NCCommunication+PushNotification.swift */,
+				3203D4452583B0FB00DD2DC0 /* NCCommunicationBackground.swift */,
+				3203D4462583B0FB00DD2DC0 /* NCCommunicationCommon.swift */,
+				3203D4472583B0FB00DD2DC0 /* NCCommunication+WebDAV.swift */,
+				3203D4482583B0FB00DD2DC0 /* NCCommunication+Comments.swift */,
+				3203D4492583B0FB00DD2DC0 /* NCCommunicationError.swift */,
+				3203D44A2583B0FB00DD2DC0 /* NCCommunicationModel.swift */,
+				3203D44B2583B0FB00DD2DC0 /* NCCommunication+Share.swift */,
+				3203D44C2583B0FB00DD2DC0 /* NCCommunication+GetShare.swift */,
+				3203D44D2583B0FB00DD2DC0 /* NCCommunication+Richdocuments.swift */,
+				3203D44E2583B0FB00DD2DC0 /* NCCommunication.swift */,
+			);
+			path = NCCom;
 			sourceTree = "<group>";
 		};
 		322F2DD6257245D500149662 /* BackgroundRun */ = {
@@ -981,10 +1134,14 @@
 		F7603298252F0E550015A421 /* Colleaction Common */ = {
 			isa = PBXGroup;
 			children = (
+				3250981625863A090033784A /* NCShareDocumentCell.swift */,
+				3250981725863A090033784A /* NCShareDocumentCell.xib */,
 				F78ACD3F21903CC20088454D /* NCGridCell.swift */,
 				F78ACD4521903D010088454D /* NCGridCell.xib */,
 				F78ACD4121903CE00088454D /* NCListCell.swift */,
 				F78ACD4321903CF20088454D /* NCListCell.xib */,
+				32003E072584F2D400B31FD1 /* NCFileDocumentCell.swift */,
+				32003E062584F2D400B31FD1 /* NCFileDocumentCell.xib */,
 				F755E6452525946C008DAB45 /* NCCollectionCommon.swift */,
 				F755E6442525946C008DAB45 /* NCCollectionViewCommon.swift */,
 			);
@@ -1024,6 +1181,8 @@
 			children = (
 				F76A81D52542D1770000A1F8 /* NCShares.swift */,
 				F76A81D62542D1770000A1F8 /* NCShares.storyboard */,
+				324FC85F2585A49B00D91807 /* NCDocumentShares.swift */,
+				324FC85A2585A43A00D91807 /* NCDocumentShares.storyboard */,
 			);
 			path = Shares;
 			sourceTree = "<group>";
@@ -1084,6 +1243,9 @@
 			children = (
 				F7725A5F251F33BB00D125E0 /* NCFiles.storyboard */,
 				F7725A5E251F33BB00D125E0 /* NCFiles.swift */,
+				3203D4D92584E61000DD2DC0 /* NCMyCommonSpaceFiles.swift */,
+				3203D4DE2584E67F00DD2DC0 /* NCMyCommonSpaceFiles.storyboard */,
+				3203D4C32584C94300DD2DC0 /* NCMyFiles.swift */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -1103,6 +1265,8 @@
 				F78ACD51219046DC0088454D /* NCSectionHeaderFooter.swift */,
 				F78ACD57219048040088454D /* NCSectionHeaderMenu.xib */,
 				F78ACD53219047D40088454D /* NCSectionFooter.xib */,
+				3203D4D12584E46900DD2DC0 /* NCSectionNoneHeaderMenu.xib */,
+				3203D4E32584E7D000DD2DC0 /* NCSectionNoneHeaderMenu.swift */,
 			);
 			path = "Section Header Footer";
 			sourceTree = "<group>";
@@ -1267,6 +1431,14 @@
 				F75ADF441DC75FFE008A7347 /* CCLogin.storyboard */,
 				F7BF1B3F1D51E893000854F6 /* CCLogin.h */,
 				F7BF1B401D51E893000854F6 /* CCLogin.m */,
+				3256F818257C8BE000DC1C34 /* MBProgressHUD+ShowToast.h */,
+				3256F819257C8BE000DC1C34 /* MBProgressHUD+ShowToast.m */,
+				3256F810257C80CD00DC1C34 /* QJLoginVC.h */,
+				3256F811257C80CD00DC1C34 /* QJLoginVC.m */,
+				3256F812257C80CD00DC1C34 /* QJLoginVC.xib */,
+				3256F820257CBEAA00DC1C34 /* QJForgotPasswordVC.h */,
+				3256F81F257CBEAA00DC1C34 /* QJForgotPasswordVC.m */,
+				3256F81E257CBEA900DC1C34 /* QJForgotPasswordVC.xib */,
 				F7DBC37B23325E01001A85BA /* NCAppConfigView.swift */,
 				F7AE00F4230D5F9E007ACF8A /* NCLoginWeb.swift */,
 				F745B252222D88AE00346520 /* NCLoginQRCode.swift */,
@@ -1461,6 +1633,7 @@
 		F7F67BAA1A24D27800EE80DA /* iOSClient */ = {
 			isa = PBXGroup;
 			children = (
+				3203D43E2583B0FB00DD2DC0 /* NCCom */,
 				32F8656B257277A30046A864 /* ChangeWifiIp */,
 				322F2DD6257245D500149662 /* BackgroundRun */,
 				F70F02A81C889183008DAB36 /* Libraries external */,
@@ -1525,6 +1698,7 @@
 		F7FC7D541DC1F93700BB2C6A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3203D4352582F81A00DD2DC0 /* Alamofire.framework */,
 				F76FDEAA24859C3D0095B6C2 /* Queuer.framework */,
 				F710C5EF2471A6D1009AD8B7 /* Sentry.framework */,
 				F7AF7632246BEDFE00B86E3C /* TOPasscodeViewController.framework */,
@@ -1534,7 +1708,6 @@
 				371B5A3223D0BD5500FAFAE9 /* FloatingPanel.framework */,
 				F765608A23BF80A400765969 /* SwiftEntryKit.framework */,
 				F765608623BF806C00765969 /* QuickLayout.framework */,
-				F716FE7723795E5000FABE50 /* NCCommunication.framework */,
 				F7E856182351D7BE009A3330 /* SwiftyXMLParser.framework */,
 				F736B551234DCF57008A5C9F /* Alamofire.framework */,
 				F74C4FBA2328C3C100A23E25 /* OpenSSL.framework */,
@@ -1628,7 +1801,9 @@
 			packageProductDependencies = (
 				F782A58A251236D1007BBABD /* Realm */,
 				F782A58C251236D1007BBABD /* RealmSwift */,
-				F786D596253454D800E3DD7B /* NCCommunication */,
+				3203D4AC2583B33F00DD2DC0 /* Alamofire */,
+				3203D4AE2583B33F00DD2DC0 /* SwiftyJSON */,
+				3203D4B02583B33F00DD2DC0 /* SwiftyXMLParser */,
 			);
 			productName = "Notification Service Extension";
 			productReference = 2C33C47F23E2C475005F963B /* Notification Service Extension.appex */;
@@ -1650,7 +1825,9 @@
 			packageProductDependencies = (
 				F782A582251236B7007BBABD /* Realm */,
 				F782A584251236B7007BBABD /* RealmSwift */,
-				F786D592253454CE00E3DD7B /* NCCommunication */,
+				3203D4A02583B32E00DD2DC0 /* Alamofire */,
+				3203D4A22583B32E00DD2DC0 /* SwiftyJSON */,
+				3203D4A42583B32E00DD2DC0 /* SwiftyXMLParser */,
 			);
 			productName = "Share Ext";
 			productReference = F7CE8AFB1DC1F8D8009CAE48 /* Share.appex */;
@@ -1672,7 +1849,9 @@
 			packageProductDependencies = (
 				F782A586251236CA007BBABD /* Realm */,
 				F782A588251236CA007BBABD /* RealmSwift */,
-				F786D594253454D300E3DD7B /* NCCommunication */,
+				3203D4A62583B33800DD2DC0 /* Alamofire */,
+				3203D4A82583B33800DD2DC0 /* SwiftyJSON */,
+				3203D4AA2583B33800DD2DC0 /* SwiftyXMLParser */,
 			);
 			productName = "File Provider Extension";
 			productReference = F771E3D020E2392D00AFB62D /* File Provider Extension.appex */;
@@ -1687,7 +1866,7 @@
 				F77B0EE91D118A16002130FE /* Resources */,
 				F77B0F981D118A16002130FE /* Embed App Extensions */,
 				F75A40001EBCB82B00B213E8 /* Run Script */,
-				325482BC25791D1800A44331 /* Embed Frameworks */,
+				3203D42B2582F7B400DD2DC0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1700,8 +1879,10 @@
 			packageProductDependencies = (
 				F782A57A25123694007BBABD /* Realm */,
 				F782A57C25123694007BBABD /* RealmSwift */,
-				F786D58C253454BF00E3DD7B /* NCCommunication */,
 				F7C4D88C2534887E00C142DA /* Parchment */,
+				3203D48F2583B16900DD2DC0 /* Alamofire */,
+				3203D4952583B23900DD2DC0 /* SwiftyJSON */,
+				3203D49B2583B2A900DD2DC0 /* SwiftyXMLParser */,
 			);
 			productName = "Crypto Cloud";
 			productReference = F7CE8AFA1DC1F8D8009CAE48 /* Nextcloud.app */;
@@ -1807,8 +1988,10 @@
 			mainGroup = F7F67B9F1A24D27800EE80DA;
 			packageReferences = (
 				F782A57925123694007BBABD /* XCRemoteSwiftPackageReference "realm-cocoa" */,
-				F786D58B253454BF00E3DD7B /* XCRemoteSwiftPackageReference "ios-communication-library" */,
 				F7C4D88B2534887E00C142DA /* XCRemoteSwiftPackageReference "Parchment" */,
+				3203D48E2583B16900DD2DC0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				3203D4942583B23900DD2DC0 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				3203D49A2583B2A900DD2DC0 /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */,
 			);
 			productRefGroup = F7F67B9F1A24D27800EE80DA;
 			projectDirPath = "";
@@ -1827,6 +2010,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3203D4D52584E46900DD2DC0 /* NCSectionNoneHeaderMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1835,6 +2019,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F78B9686234F785300F54315 /* NCSelectDestination.storyboard in Resources */,
+				3203D4D32584E46900DD2DC0 /* NCSectionNoneHeaderMenu.xib in Resources */,
 				F78BFEE11D31126B00E513CF /* MainInterface.storyboard in Resources */,
 				F7145A1A1D12E3B700CAFEEC /* Images.xcassets in Resources */,
 				F7F8D71D1ED6183000E711F3 /* CCCellShareExt.xib in Resources */,
@@ -1847,6 +2032,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3203D4D42584E46900DD2DC0 /* NCSectionNoneHeaderMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1856,11 +2042,13 @@
 			files = (
 				F76A81D82542D1770000A1F8 /* NCShares.storyboard in Resources */,
 				F7362A1F220C853A005101B5 /* LaunchScreen.storyboard in Resources */,
+				324FC85B2585A43A00D91807 /* NCDocumentShares.storyboard in Resources */,
 				F75ADF451DC75FFE008A7347 /* CCLogin.storyboard in Resources */,
 				F76A82022542D6580000A1F8 /* NCShareUserCell.xib in Resources */,
 				F77D49A91DC238E500CDC568 /* loading.gif in Resources */,
 				F77444F622281649000D5EB0 /* NCGridMediaCell.xib in Resources */,
 				F78ACD4421903CF20088454D /* NCListCell.xib in Resources */,
+				32003E082584F2D400B31FD1 /* NCFileDocumentCell.xib in Resources */,
 				F78ACD4621903D010088454D /* NCGridCell.xib in Resources */,
 				F7A80BCA252624C100C7CD01 /* NCFileViewInFolder.storyboard in Resources */,
 				F76D3CF52428D0C1005DFA87 /* NCViewerPDF.storyboard in Resources */,
@@ -1877,6 +2065,8 @@
 				F76A820B2542D6580000A1F8 /* NCShareUserMenuView.xib in Resources */,
 				F7226EDC1EE4089300EBECB1 /* Main.storyboard in Resources */,
 				F76A82062542D6580000A1F8 /* NCShareCommentsCell.xib in Resources */,
+				3250981925863A090033784A /* NCShareDocumentCell.xib in Resources */,
+				3256F821257CBEAA00DC1C34 /* QJForgotPasswordVC.xib in Resources */,
 				F7632FBF21832F8700721B71 /* NCTrashSectionHeaderMenu.xib in Resources */,
 				F76A81A02542CC650000A1F8 /* NCEmptyView.xib in Resources */,
 				3704EB2A23D5A58400455C5B /* NCMenu.storyboard in Resources */,
@@ -1893,6 +2083,7 @@
 				F717402D24F699A5000C87D5 /* NCFavorite.storyboard in Resources */,
 				F78ACD4B21903F850088454D /* NCTrashListCell.xib in Resources */,
 				F7725A61251F33BB00D125E0 /* NCFiles.storyboard in Resources */,
+				3256F814257C80CD00DC1C34 /* QJLoginVC.xib in Resources */,
 				F70A58C024D0545100DED00D /* NCCapabilitiesViewController.storyboard in Resources */,
 				F749C10D23C4A5340027D966 /* NCIntro.storyboard in Resources */,
 				F747BA1F22354D2000971601 /* NCCreateFormUploadVoiceNote.storyboard in Resources */,
@@ -1916,10 +2107,12 @@
 				F78ACD58219048040088454D /* NCSectionHeaderMenu.xib in Resources */,
 				F70006FA24164F8D00F214A5 /* NCViewerImageVideo.storyboard in Resources */,
 				F774DF101FCC26BE002AF9FC /* iTunesArtwork@2x.png in Resources */,
+				3203D4D22584E46900DD2DC0 /* NCSectionNoneHeaderMenu.xib in Resources */,
 				F7501C322212E57500FB1415 /* NCMedia.storyboard in Resources */,
 				F74DE14425135B6800917068 /* NCTransfers.storyboard in Resources */,
 				F76A82002542D6580000A1F8 /* NCShareLinkCell.xib in Resources */,
 				F76A82072542D6580000A1F8 /* NCShareLinkFolderMenuView.xib in Resources */,
+				3203D4DF2584E67F00DD2DC0 /* NCMyCommonSpaceFiles.storyboard in Resources */,
 				F774DF111FCC26BE002AF9FC /* iTunesArtwork@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1970,13 +2163,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3203D4522583B0FB00DD2DC0 /* NCCommunication+API.swift in Sources */,
+				3203D4662583B0FB00DD2DC0 /* NCCommunicationBackground.swift in Sources */,
 				F785EEA52461A4CF00B3F945 /* CCUtility.m in Sources */,
+				3203D4622583B0FB00DD2DC0 /* NCCommunication+PushNotification.swift in Sources */,
+				3203D4862583B0FC00DD2DC0 /* NCCommunication+Richdocuments.swift in Sources */,
 				2C1D5D7923E2DE9100334ABB /* NCBrand.swift in Sources */,
+				3203D45E2583B0FB00DD2DC0 /* NCCommunication+E2EE.swift in Sources */,
+				3203D48A2583B0FC00DD2DC0 /* NCCommunication.swift in Sources */,
+				3203D46E2583B0FC00DD2DC0 /* NCCommunication+WebDAV.swift in Sources */,
+				3203D4762583B0FC00DD2DC0 /* NCCommunicationError.swift in Sources */,
+				3203D46A2583B0FB00DD2DC0 /* NCCommunicationCommon.swift in Sources */,
 				2C1D5D7523E2DE3300334ABB /* NCDatabase.swift in Sources */,
+				3203D4562583B0FB00DD2DC0 /* NCCommunication+Login.swift in Sources */,
 				2C1D5D7623E2DE3300334ABB /* NCManageDatabase.swift in Sources */,
 				2C33C48223E2C475005F963B /* NotificationService.swift in Sources */,
+				3203D47A2583B0FC00DD2DC0 /* NCCommunicationModel.swift in Sources */,
+				3203D45A2583B0FB00DD2DC0 /* NCCommunication+NCText.swift in Sources */,
 				F73D5E4A246DE09200DF6467 /* NCElementsJSON.swift in Sources */,
+				3203D4822583B0FC00DD2DC0 /* NCCommunication+GetShare.swift in Sources */,
+				3203D47E2583B0FC00DD2DC0 /* NCCommunication+Share.swift in Sources */,
 				F74AF3A7247FB6AE00AC767B /* NCUtilityFileSystem.swift in Sources */,
+				3203D4722583B0FC00DD2DC0 /* NCCommunication+Comments.swift in Sources */,
 				2CB7D1CA23E2EDCB00376EF9 /* NCPushNotificationEncryption.m in Sources */,
 				F782FDC424E6933900666099 /* NCUtility.swift in Sources */,
 			);
@@ -1987,21 +2195,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				F71459BA1D12E3B700CAFEEC /* NSString+TruncateToWidth.m in Sources */,
+				3203D4682583B0FB00DD2DC0 /* NCCommunicationCommon.swift in Sources */,
+				3203D4742583B0FC00DD2DC0 /* NCCommunicationError.swift in Sources */,
+				3203D4602583B0FB00DD2DC0 /* NCCommunication+PushNotification.swift in Sources */,
 				F73D5E48246DE09200DF6467 /* NCElementsJSON.swift in Sources */,
 				F70460532499095400BB98A7 /* NotificationCenter+MainThread.swift in Sources */,
 				F71459C21D12E3B700CAFEEC /* ShareViewController.m in Sources */,
+				3203D46C2583B0FC00DD2DC0 /* NCCommunication+WebDAV.swift in Sources */,
 				F70BFC7520E0FA7D00C67599 /* NCUtility.swift in Sources */,
 				F78295311F962EFA00A572F5 /* NCEndToEndEncryption.m in Sources */,
 				F74AF3A5247FB6AE00AC767B /* NCUtilityFileSystem.swift in Sources */,
 				F7F878AF1FB9E3B900599E4F /* NCEndToEndMetadata.swift in Sources */,
+				3203D45C2583B0FB00DD2DC0 /* NCCommunication+E2EE.swift in Sources */,
 				F71459D21D12E3B700CAFEEC /* CCUtility.m in Sources */,
 				F7F8D71C1ED6183000E711F3 /* CCCellShareExt.m in Sources */,
 				F71459E11D12E3B700CAFEEC /* CCHud.m in Sources */,
+				3203D4802583B0FC00DD2DC0 /* NCCommunication+GetShare.swift in Sources */,
 				F765609023BF813600765969 /* NCContentPresenter.swift in Sources */,
+				3203D4582583B0FB00DD2DC0 /* NCCommunication+NCText.swift in Sources */,
+				3203D4642583B0FB00DD2DC0 /* NCCommunicationBackground.swift in Sources */,
 				F75A9EE723796C6F0044CFCE /* NCNetworking.swift in Sources */,
+				3203D4502583B0FB00DD2DC0 /* NCCommunication+API.swift in Sources */,
 				F71459F71D12E3B700CAFEEC /* CCGraphics.m in Sources */,
+				3203D4542583B0FB00DD2DC0 /* NCCommunication+Login.swift in Sources */,
+				3203D4842583B0FC00DD2DC0 /* NCCommunication+Richdocuments.swift in Sources */,
 				F7BAADC91ED5A87C00B7EAD4 /* NCDatabase.swift in Sources */,
+				3203D4882583B0FC00DD2DC0 /* NCCommunication.swift in Sources */,
+				3203D4702583B0FC00DD2DC0 /* NCCommunication+Comments.swift in Sources */,
 				F780710A1EDAB65800EAFFF6 /* NSNotificationCenter+MainThread.m in Sources */,
+				3203D4782583B0FC00DD2DC0 /* NCCommunicationModel.swift in Sources */,
+				3203D47C2583B0FC00DD2DC0 /* NCCommunication+Share.swift in Sources */,
 				F78B9685234F785300F54315 /* NCSelectDestination.m in Sources */,
 				F7145A041D12E3B700CAFEEC /* CCloadItemData.swift in Sources */,
 				F76B3CCF1EAE01BD00921AC9 /* NCBrand.swift in Sources */,
@@ -2013,18 +2236,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3203D45D2583B0FB00DD2DC0 /* NCCommunication+E2EE.swift in Sources */,
+				3203D4592583B0FB00DD2DC0 /* NCCommunication+NCText.swift in Sources */,
+				3203D4512583B0FB00DD2DC0 /* NCCommunication+API.swift in Sources */,
+				3203D4652583B0FB00DD2DC0 /* NCCommunicationBackground.swift in Sources */,
 				F771E3F720E239B500AFB62D /* FileProviderExtension+Actions.swift in Sources */,
 				F76673F022C90434007ED366 /* FileProviderUtility.swift in Sources */,
+				3203D4692583B0FB00DD2DC0 /* NCCommunicationCommon.swift in Sources */,
 				F7434B3420E23FD700417916 /* NCDatabase.swift in Sources */,
 				F7434B3820E2400600417916 /* NCBrand.swift in Sources */,
+				3203D4892583B0FC00DD2DC0 /* NCCommunication.swift in Sources */,
 				F785EE9E2461A09900B3F945 /* NCNetworking.swift in Sources */,
+				3203D4792583B0FC00DD2DC0 /* NCCommunicationModel.swift in Sources */,
 				F771E3D320E2392D00AFB62D /* FileProviderExtension.swift in Sources */,
+				3203D4852583B0FC00DD2DC0 /* NCCommunication+Richdocuments.swift in Sources */,
+				3203D4612583B0FB00DD2DC0 /* NCCommunication+PushNotification.swift in Sources */,
+				3203D4812583B0FC00DD2DC0 /* NCCommunication+GetShare.swift in Sources */,
 				F73D5E49246DE09200DF6467 /* NCElementsJSON.swift in Sources */,
 				F771E3D520E2392D00AFB62D /* FileProviderItem.swift in Sources */,
+				3203D4752583B0FC00DD2DC0 /* NCCommunicationError.swift in Sources */,
+				3203D4552583B0FB00DD2DC0 /* NCCommunication+Login.swift in Sources */,
 				F7434B3620E23FE000417916 /* NCManageDatabase.swift in Sources */,
 				F70460542499095400BB98A7 /* NotificationCenter+MainThread.swift in Sources */,
 				F785EEA42461A4A600B3F945 /* NCUtility.swift in Sources */,
+				3203D4712583B0FC00DD2DC0 /* NCCommunication+Comments.swift in Sources */,
+				3203D46D2583B0FC00DD2DC0 /* NCCommunication+WebDAV.swift in Sources */,
 				F771E3F320E239A600AFB62D /* FileProviderData.swift in Sources */,
+				3203D47D2583B0FC00DD2DC0 /* NCCommunication+Share.swift in Sources */,
 				F771E3D720E2392D00AFB62D /* FileProviderEnumerator.swift in Sources */,
 				F74AF3A6247FB6AE00AC767B /* NCUtilityFileSystem.swift in Sources */,
 				F771E3F820E239B500AFB62D /* FileProviderExtension+Thumbnail.swift in Sources */,
@@ -2045,6 +2283,7 @@
 				F77B0DF51D118A16002130FE /* CCUtility.m in Sources */,
 				F710D1FE24057E5E00A6033D /* NCActionSheetHeader.swift in Sources */,
 				F790110E21415BF600D7B136 /* NCViewerRichdocument.swift in Sources */,
+				3203D46B2583B0FC00DD2DC0 /* NCCommunication+WebDAV.swift in Sources */,
 				F78ACD4021903CC20088454D /* NCGridCell.swift in Sources */,
 				37ECC83B23D0C7410082EFA2 /* NCMenuAction.swift in Sources */,
 				F75B0ABD244C4DBB00E58DCA /* NCNetworkingNotificationCenter.swift in Sources */,
@@ -2052,10 +2291,15 @@
 				F78ACD4221903CE00088454D /* NCListCell.swift in Sources */,
 				F76D3CF12428B40E005DFA87 /* NCViewerPDFSearch.swift in Sources */,
 				F73F537F1E929C8500F8678D /* CCMore.swift in Sources */,
+				3203D46F2583B0FC00DD2DC0 /* NCCommunication+Comments.swift in Sources */,
+				3203D44F2583B0FB00DD2DC0 /* NCCommunication+API.swift in Sources */,
 				F79018B7240962C7007C9B6D /* NCViewerImageContentView.swift in Sources */,
+				3203D4DA2584E61000DD2DC0 /* NCMyCommonSpaceFiles.swift in Sources */,
 				F78E7065219F096B006F23E4 /* NCAvatar.swift in Sources */,
+				3203D4632583B0FB00DD2DC0 /* NCCommunicationBackground.swift in Sources */,
 				F7DFB7F0219C5B8000680748 /* NCCreateFormUploadAssets.swift in Sources */,
 				F73B422C2476764F00A30FD3 /* NCNotification.swift in Sources */,
+				3203D4672583B0FB00DD2DC0 /* NCCommunicationCommon.swift in Sources */,
 				371B5A2E23D0B04500FAFAE9 /* NCMainMenuTableViewController.swift in Sources */,
 				F77444F8222816D5000D5EB0 /* NCPickerViewController.swift in Sources */,
 				F72A47EC2487B06B005AD489 /* NCOperationQueue.swift in Sources */,
@@ -2065,10 +2309,12 @@
 				F7B0C1751EE839A30033AC24 /* NCAutoUpload.m in Sources */,
 				F738E8421F90FFD100F95C8E /* NCManageEndToEndEncryption.m in Sources */,
 				F7A80BCB252624C100C7CD01 /* NCFileViewInFolder.swift in Sources */,
+				3203D4E42584E7D000DD2DC0 /* NCSectionNoneHeaderMenu.swift in Sources */,
 				F78A18B823CDE2B300F681F3 /* NCViewerRichWorkspace.swift in Sources */,
 				F78A18B623CDD07D00F681F3 /* NCViewerRichWorkspaceWebView.swift in Sources */,
 				F75A9EE623796C6F0044CFCE /* NCNetworking.swift in Sources */,
 				F76A81FE2542D6580000A1F8 /* NCShareComments.swift in Sources */,
+				324FC8602585A49B00D91807 /* NCDocumentShares.swift in Sources */,
 				F758B460212C56A400515F55 /* ScanCollectionView.swift in Sources */,
 				F78ACD52219046DC0088454D /* NCSectionHeaderFooter.swift in Sources */,
 				F749C10C23C4A5340027D966 /* NCIntroViewController.swift in Sources */,
@@ -2082,6 +2328,7 @@
 				F704B5E92430C0B800632F5F /* NCCreateFormUploadConflictCell.swift in Sources */,
 				F76A81FF2542D6580000A1F8 /* NCShareLinkMenuView.swift in Sources */,
 				F72D404923D2082500A97FD0 /* NCViewerNextcloudText.swift in Sources */,
+				3256F822257CBEAA00DC1C34 /* QJForgotPasswordVC.m in Sources */,
 				F77B0E221D118A16002130FE /* CCManageLocation.m in Sources */,
 				F7CA1ED120E7E3FE002CC65E /* PKCircleProgressView.m in Sources */,
 				F72D1007210B6882009C96B7 /* NCPushNotificationEncryption.m in Sources */,
@@ -2093,6 +2340,7 @@
 				F77B0E4F1D118A16002130FE /* CCManageAutoUpload.m in Sources */,
 				F7FCFFE01D707B83000E6E29 /* CCPeekPop.m in Sources */,
 				F7BAADC81ED5A87C00B7EAD4 /* NCDatabase.swift in Sources */,
+				3203D4872583B0FC00DD2DC0 /* NCCommunication.swift in Sources */,
 				F75C0C4823D1FAE300163CC8 /* NCRichWorkspaceCommon.swift in Sources */,
 				F78ACD4A21903F850088454D /* NCTrashListCell.swift in Sources */,
 				F760329F252F0F8E0015A421 /* NCTransferCell.swift in Sources */,
@@ -2103,6 +2351,7 @@
 				F7651A8B23A2A3F2001403D2 /* NCCreateFormUploadDocuments.swift in Sources */,
 				F76A81D72542D1770000A1F8 /* NCShares.swift in Sources */,
 				F74AF3A4247FB6AE00AC767B /* NCUtilityFileSystem.swift in Sources */,
+				3203D4572583B0FB00DD2DC0 /* NCCommunication+NCText.swift in Sources */,
 				F7417DB3216CE925007D05F5 /* NCTrashSectionHeaderFooter.swift in Sources */,
 				F76A82092542D6580000A1F8 /* NCShareNetworking.swift in Sources */,
 				F7F878AE1FB9E3B900599E4F /* NCEndToEndMetadata.swift in Sources */,
@@ -2111,12 +2360,17 @@
 				F738143A240FE48D00404AC7 /* NCViewerImageCommon.swift in Sources */,
 				3781B9B023DB2B7E006B4B1D /* AppDelegate+Menu.swift in Sources */,
 				F73D5E47246DE09200DF6467 /* NCElementsJSON.swift in Sources */,
+				3203D45F2583B0FB00DD2DC0 /* NCCommunication+PushNotification.swift in Sources */,
 				F710D1F52405770F00A6033D /* NCViewerPDF.swift in Sources */,
 				F7501C332212E57500FB1415 /* NCMedia.swift in Sources */,
+				3203D4832583B0FC00DD2DC0 /* NCCommunication+Richdocuments.swift in Sources */,
+				3203D4772583B0FC00DD2DC0 /* NCCommunicationModel.swift in Sources */,
 				32F8657C2572798F0046A864 /* NCSwitchWifiIp.m in Sources */,
 				F70BFC7420E0FA7D00C67599 /* NCUtility.swift in Sources */,
 				F7C1EEA525053A9C00866ACC /* NCDataSource.swift in Sources */,
 				F713FF002472764100214AF6 /* UIImage+animatedGIF.m in Sources */,
+				3250981825863A090033784A /* NCShareDocumentCell.swift in Sources */,
+				3203D4732583B0FC00DD2DC0 /* NCCommunicationError.swift in Sources */,
 				F7B174C822FAC0A8000B7579 /* AppDelegate.m in Sources */,
 				F76A82032542D6580000A1F8 /* NCSharePaging.swift in Sources */,
 				F749C10B23C4A5340027D966 /* NCIntroCollectionViewCell.swift in Sources */,
@@ -2126,11 +2380,13 @@
 				F76B3CCE1EAE01BD00921AC9 /* NCBrand.swift in Sources */,
 				F7BF1B431D51E893000854F6 /* CCLogin.m in Sources */,
 				F7CA1ED720E7E3FE002CC65E /* PKDownloadButton.m in Sources */,
+				3203D4532583B0FB00DD2DC0 /* NCCommunication+Login.swift in Sources */,
 				F77B0E981D118A16002130FE /* CCManageAccount.m in Sources */,
 				F755BD9B20594AC7008C5FBB /* NCService.swift in Sources */,
 				F77B0EA61D118A16002130FE /* NSString+TruncateToWidth.m in Sources */,
 				F7CA1ED020E7E3FE002CC65E /* UIImage+PKDownloadButton.m in Sources */,
 				324EBABE25736AA800D1D80F /* Reachability.m in Sources */,
+				3203D47F2583B0FC00DD2DC0 /* NCCommunication+GetShare.swift in Sources */,
 				F7DFB7F4219C5CA800680748 /* NCCreateFormUploadScanDocument.swift in Sources */,
 				F70006FC2416500B00F214A5 /* NCViewerImageVideo.swift in Sources */,
 				F710D1FF24057E5E00A6033D /* NCActionSheetHeaderView.swift in Sources */,
@@ -2141,6 +2397,7 @@
 				F726EEEC1FED1C820030B9C8 /* NCEndToEndInitialize.swift in Sources */,
 				F79A65C62191D95E00FF6DCC /* NCSelect.swift in Sources */,
 				F7E0E1DC22327885006B0911 /* NCAudioRecorderViewController.swift in Sources */,
+				3203D4C42584C94300DD2DC0 /* NCMyFiles.swift in Sources */,
 				F70CAE3A1F8CF31A008125FD /* NCEndToEndEncryption.m in Sources */,
 				F710D1F924057C9D00A6033D /* NCDetailViewController.swift in Sources */,
 				F7AE00F5230D5F9E007ACF8A /* NCLoginWeb.swift in Sources */,
@@ -2162,20 +2419,25 @@
 				F70CEF5623E9C7E50007035B /* UIColor+adjust.swift in Sources */,
 				F75AC2431F1F62450073EC19 /* NCManageAutoUploadFileName.swift in Sources */,
 				F79630EE215527D40015EEA5 /* NCViewerVideo.swift in Sources */,
+				32003E092584F2D400B31FD1 /* NCFileDocumentCell.swift in Sources */,
 				F76A82052542D6580000A1F8 /* NCShare.swift in Sources */,
 				F7CA1ED620E7E3FE002CC65E /* CALayer+PKDownloadButtonAnimations.m in Sources */,
 				F7C7B489245EBA4100D93E60 /* NCViewerQuickLook.swift in Sources */,
 				F758B45E212C569D00515F55 /* ScanCell.swift in Sources */,
+				3203D45B2583B0FB00DD2DC0 /* NCCommunication+E2EE.swift in Sources */,
 				F7CA1ED920E7E3FE002CC65E /* NSLayoutConstraint+PKDownloadButton.m in Sources */,
 				F77B0ED11D118A16002130FE /* Acknowledgements.m in Sources */,
 				F70D8D8124A4A9BF000A5756 /* NCNetworkingAutoUpload.swift in Sources */,
+				3256F813257C80CD00DC1C34 /* QJLoginVC.m in Sources */,
 				F7D96FCC246ED7E200536D73 /* NCNetworkingCheckRemoteUser.swift in Sources */,
 				F717402E24F699A5000C87D5 /* NCFavorite.swift in Sources */,
+				3256F81A257C8BE000DC1C34 /* MBProgressHUD+ShowToast.m in Sources */,
 				F74DE14325135B6800917068 /* NCTransfers.swift in Sources */,
 				37C83A0D24532B7200618A3B /* AppDelegate+Swift.swift in Sources */,
 				F77B0ED51D118A16002130FE /* PHAsset+Utility.m in Sources */,
 				F755E6462525946C008DAB45 /* NCCollectionViewCommon.swift in Sources */,
 				F77B0ED91D118A16002130FE /* main.m in Sources */,
+				3203D47B2583B0FC00DD2DC0 /* NCCommunication+Share.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2286,6 +2548,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/iOSClient",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PREFIX_HEADER = iOSClient/CryptoCloud.pch;
@@ -2303,7 +2566,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "\"Libraries external\"/**";
-				MARKETING_VERSION = 1.0.20201130;
+				MARKETING_VERSION = 1.0.20201213;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -2341,6 +2604,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/iOSClient",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PREFIX_HEADER = iOSClient/CryptoCloud.pch;
@@ -2358,7 +2622,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "\"Libraries external\"/**";
-				MARKETING_VERSION = 1.0.20201130;
+				MARKETING_VERSION = 1.0.20201213;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qijicloud.client.Notification-Service-Extension";
@@ -2388,6 +2652,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/iOSClient",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = iOSClient/CryptoCloud.pch;
@@ -2405,7 +2670,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "\"Libraries external\"/**";
-				MARKETING_VERSION = 1.0.20201130;
+				MARKETING_VERSION = 1.0.20201213;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qijicloud.client.Share;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2436,6 +2701,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/iOSClient",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = iOSClient/CryptoCloud.pch;
@@ -2453,7 +2719,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "\"Libraries external\"/**";
-				MARKETING_VERSION = 1.0.20201130;
+				MARKETING_VERSION = 1.0.20201213;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qijicloud.client.Share;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2490,6 +2756,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/iOSClient",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PREFIX_HEADER = iOSClient/CryptoCloud.pch;
@@ -2507,7 +2774,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "\"Libraries external\"/**";
-				MARKETING_VERSION = 1.0.20201130;
+				MARKETING_VERSION = 1.0.20201213;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qijicloud.client.File-Provider-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2544,6 +2811,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/iOSClient",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PREFIX_HEADER = iOSClient/CryptoCloud.pch;
@@ -2561,7 +2829,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "\"Libraries external\"/**";
-				MARKETING_VERSION = 1.0.20201130;
+				MARKETING_VERSION = 1.0.20201213;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qijicloud.client.File-Provider-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2590,6 +2858,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/iOSClient",
+					"$(PROJECT_DIR)/iOSClient/NCCom/Carthage/Build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOSClient/CryptoCloud.pch;
@@ -2604,7 +2874,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "";
-				MARKETING_VERSION = 1.0.20201130;
+				MARKETING_VERSION = 1.0.20201213;
 				OTHER_LDFLAGS = "-ObjC";
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qijicloud.client;
@@ -2639,6 +2909,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/iOSClient",
+					"$(PROJECT_DIR)/iOSClient/NCCom/Carthage/Build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOSClient/CryptoCloud.pch;
@@ -2652,7 +2924,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "";
-				MARKETING_VERSION = 1.0.20201130;
+				MARKETING_VERSION = 1.0.20201213;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qijicloud.client;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2846,20 +3118,36 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3203D48E2583B16900DD2DC0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+		3203D4942583B23900DD2DC0 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		3203D49A2583B2A900DD2DC0 /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yahoojapan/SwiftyXMLParser";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.0;
+			};
+		};
 		F782A57925123694007BBABD /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa";
 			requirement = {
 				kind = exactVersion;
 				version = 5.4.8;
-			};
-		};
-		F786D58B253454BF00E3DD7B /* XCRemoteSwiftPackageReference "ios-communication-library" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/nextcloud/ios-communication-library/";
-			requirement = {
-				kind = exactVersion;
-				version = 0.84.0;
 			};
 		};
 		F7C4D88B2534887E00C142DA /* XCRemoteSwiftPackageReference "Parchment" */ = {
@@ -2873,6 +3161,66 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3203D48F2583B16900DD2DC0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3203D48E2583B16900DD2DC0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		3203D4952583B23900DD2DC0 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3203D4942583B23900DD2DC0 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		3203D49B2583B2A900DD2DC0 /* SwiftyXMLParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3203D49A2583B2A900DD2DC0 /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */;
+			productName = SwiftyXMLParser;
+		};
+		3203D4A02583B32E00DD2DC0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3203D48E2583B16900DD2DC0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		3203D4A22583B32E00DD2DC0 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3203D4942583B23900DD2DC0 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		3203D4A42583B32E00DD2DC0 /* SwiftyXMLParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3203D49A2583B2A900DD2DC0 /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */;
+			productName = SwiftyXMLParser;
+		};
+		3203D4A62583B33800DD2DC0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3203D48E2583B16900DD2DC0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		3203D4A82583B33800DD2DC0 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3203D4942583B23900DD2DC0 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		3203D4AA2583B33800DD2DC0 /* SwiftyXMLParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3203D49A2583B2A900DD2DC0 /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */;
+			productName = SwiftyXMLParser;
+		};
+		3203D4AC2583B33F00DD2DC0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3203D48E2583B16900DD2DC0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		3203D4AE2583B33F00DD2DC0 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3203D4942583B23900DD2DC0 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		3203D4B02583B33F00DD2DC0 /* SwiftyXMLParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3203D49A2583B2A900DD2DC0 /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */;
+			productName = SwiftyXMLParser;
+		};
 		F782A57A25123694007BBABD /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F782A57925123694007BBABD /* XCRemoteSwiftPackageReference "realm-cocoa" */;
@@ -2912,26 +3260,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F782A57925123694007BBABD /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
-		};
-		F786D58C253454BF00E3DD7B /* NCCommunication */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F786D58B253454BF00E3DD7B /* XCRemoteSwiftPackageReference "ios-communication-library" */;
-			productName = NCCommunication;
-		};
-		F786D592253454CE00E3DD7B /* NCCommunication */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F786D58B253454BF00E3DD7B /* XCRemoteSwiftPackageReference "ios-communication-library" */;
-			productName = NCCommunication;
-		};
-		F786D594253454D300E3DD7B /* NCCommunication */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F786D58B253454BF00E3DD7B /* XCRemoteSwiftPackageReference "ios-communication-library" */;
-			productName = NCCommunication;
-		};
-		F786D596253454D800E3DD7B /* NCCommunication */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F786D58B253454BF00E3DD7B /* XCRemoteSwiftPackageReference "ios-communication-library" */;
-			productName = NCCommunication;
 		};
 		F7C4D88C2534887E00C142DA /* Parchment */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -22,7 +22,7 @@
 //
 
 import RealmSwift
-import NCCommunication
+//mport NCCommunication
 import SwiftyJSON
 
 class NCManageDatabase: NSObject {
@@ -1995,6 +1995,27 @@ class NCManageDatabase: NSObject {
             NCCommunicationCommon.shared.writeLog("Could not write to database: \(error)")
         }
     }
+    
+    @objc func updateMetadatasSpaceDocument(account: String, metadatas: [tableMetadata]) {
+        
+        let realm = try! Realm()
+        
+        do {
+            try realm.safeWrite {
+                let results = realm.objects(tableMetadata.self).filter("account == %@ AND spaceDocument == true", account)
+                for result in results {
+                    result.favorite = false
+                }
+                for metadata in metadatas {
+                    metadata.spaceDocument = true
+                    realm.add(metadata, update: .all)
+                }
+            }
+        } catch let error {
+            NCCommunicationCommon.shared.writeLog("Could not write to database: \(error)")
+        }
+    }
+    
    
     @objc func setMetadataEncrypted(ocId: String, encrypted: Bool) {
            

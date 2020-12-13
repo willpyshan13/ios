@@ -22,7 +22,7 @@
 //
 
 import Foundation
-import NCCommunication
+//mport NCCommunication
 import MarkdownKit
 
 @objc class NCViewerRichWorkspace: UIViewController, UIAdaptivePresentationControllerDelegate {

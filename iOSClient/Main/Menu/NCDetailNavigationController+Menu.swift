@@ -22,7 +22,7 @@
 //
 
 import FloatingPanel
-import NCCommunication
+//mport NCCommunication
 
 extension NCDetailNavigationController {
 

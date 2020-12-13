@@ -24,7 +24,7 @@
 
 import Foundation
 import WeScan
-import NCCommunication
+//mport NCCommunication
 import Vision
 
 class NCCreateFormUploadScanDocument: XLFormViewController, NCSelectDelegate, NCCreateFormUploadConflictDelegate {

@@ -24,7 +24,7 @@
 
 import Foundation
 import Parchment
-import NCCommunication
+//mport NCCommunication
 
 class NCSharePaging: UIViewController {
     

@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo1" translatesAutoresizingMaskIntoConstraints="NO" id="7UE-Dr-Fma">
-                                <rect key="frame" x="76" y="255" width="223" height="157.5"/>
+                                <rect key="frame" x="37.5" y="227.5" width="300" height="212"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -34,6 +34,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo1" width="223" height="157.5"/>
+        <image name="logo1" width="300" height="212"/>
     </resources>
 </document>

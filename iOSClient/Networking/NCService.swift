@@ -23,7 +23,7 @@
 
 import Foundation
 import SVGKit
-import NCCommunication
+//mport NCCommunication
 
 class NCService: NSObject {
     @objc static let shared: NCService = {

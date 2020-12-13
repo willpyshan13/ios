@@ -23,7 +23,7 @@
 
 import Foundation
 import WebKit
-import NCCommunication
+//mport NCCommunication
 
 class NCViewerRichdocument: WKWebView, WKNavigationDelegate, WKScriptMessageHandler, NCSelectDelegate {
     

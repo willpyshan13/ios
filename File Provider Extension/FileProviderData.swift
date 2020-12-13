@@ -21,7 +21,7 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-import NCCommunication
+//mport NCCommunication
 
 class fileProviderData: NSObject {
     @objc static let shared: fileProviderData = {

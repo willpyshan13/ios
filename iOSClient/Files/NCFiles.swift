@@ -22,7 +22,7 @@
 //
 
 import Foundation
-import NCCommunication
+//mport NCCommunication
 
 class NCFiles: NCCollectionViewCommon  {
     
@@ -43,10 +43,13 @@ class NCFiles: NCCollectionViewCommon  {
     override func viewWillAppear(_ animated: Bool) {
         
         if isRoot {
+
             serverUrl = NCUtility.shared.getHomeServer(urlBase: appDelegate.urlBase, account: appDelegate.account)
+
         }
         
         super.viewWillAppear(animated)
+        
     }
     
     // MARK: - NotificationCenter
@@ -56,6 +59,7 @@ class NCFiles: NCCollectionViewCommon  {
         if isRoot {
             serverUrl = NCUtility.shared.getHomeServer(urlBase: appDelegate.urlBase, account: appDelegate.account)
             reloadDataSourceNetwork(forced: true)
+            
         }
         
         super.initializeMain()
@@ -69,7 +73,39 @@ class NCFiles: NCCollectionViewCommon  {
         DispatchQueue.global().async {
                         
             if !self.isSearching {
-                self.metadatasSource = NCManageDatabase.sharedInstance.getMetadatas(predicate: NSPredicate(format: "account == %@ AND serverUrl == %@", self.appDelegate.account, self.serverUrl))
+                if self.isDocuomentType == 1 {
+                    self.metadatasSource = NCManageDatabase.sharedInstance.getMetadatas(predicate: NSPredicate(format: "account == %@ AND spaceDocument == true", self.appDelegate.account))
+                    var selectMetadatas:[tableMetadata] = []
+                    for metadata in self.metadatasSource {
+                        if metadata.mountType == "" {
+                            selectMetadatas.append(metadata)
+                        }
+                    }
+                    self.metadatasSource = selectMetadatas
+                    
+                } else if self.isDocuomentType == 2 {
+                    self.metadatasSource = NCManageDatabase.sharedInstance.getMetadatas(predicate: NSPredicate(format: "account == %@ AND spaceDocument == true", self.appDelegate.account))
+                    var selectMetadatas:[tableMetadata] = []
+                    for metadata in self.metadatasSource {
+                        if metadata.mountType == "user" {
+                            selectMetadatas.append(metadata)
+                        }
+                    }
+                    self.metadatasSource = selectMetadatas
+                    
+                } else if self.isDocuomentType == 3 {
+                    self.metadatasSource = NCManageDatabase.sharedInstance.getMetadatas(predicate: NSPredicate(format: "account == %@ AND spaceDocument == true", self.appDelegate.account))
+                    var selectMetadatas:[tableMetadata] = []
+                    for metadata in self.metadatasSource {
+                        if metadata.mountType == "group" {
+                            selectMetadatas.append(metadata)
+                        }
+                    }
+                    self.metadatasSource = selectMetadatas
+                    
+                } else {
+                    self.metadatasSource = NCManageDatabase.sharedInstance.getMetadatas(predicate: NSPredicate(format: "account == %@ AND serverUrl == %@", self.appDelegate.account, self.serverUrl))
+                }
                 if self.metadataFolder == nil {
                     self.metadataFolder = NCManageDatabase.sharedInstance.getMetadataFolder(account: self.appDelegate.account, urlBase: self.appDelegate.urlBase, serverUrl:  self.serverUrl)
                 }
@@ -94,27 +130,60 @@ class NCFiles: NCCollectionViewCommon  {
         
         isReloadDataSourceNetworkInProgress = true
         collectionView?.reloadData()
-               
-        networkReadFolder(forced: forced) { (metadatas, metadatasUpdate, errorCode, errorDescription) in
-            if errorCode == 0 {
-                for metadata in metadatas ?? [] {
-                    if !metadata.directory {
-                        let localFile = NCManageDatabase.sharedInstance.getTableLocalFile(predicate: NSPredicate(format: "ocId == %@", metadata.ocId))
-                        if (CCUtility.getFavoriteOffline() && localFile == nil) || (localFile != nil && localFile?.etag != metadata.etag) {
-                            NCOperationQueue.shared.download(metadata: metadata, selector: selectorDownloadFile, setFavorite: false, forceDownload: true)
+        
+        if isDocuomentType == 1 {
+            
+            networkReadFolder(forced: forced) { (metadatas, metadatasUpdate, errorCode, errorDescription) in
+                if errorCode == 0 {
+                    NCManageDatabase.sharedInstance.updateMetadatasSpaceDocument(account: self.appDelegate.account, metadatas: metadatas ?? [])
+
+                    for metadata in metadatas ?? [] {
+
+                        
+                        if !metadata.directory {
+                            let localFile = NCManageDatabase.sharedInstance.getTableLocalFile(predicate: NSPredicate(format: "ocId == %@", metadata.ocId))
+                            if (CCUtility.getFavoriteOffline() && localFile == nil) || (localFile != nil && localFile?.etag != metadata.etag) {
+                                NCOperationQueue.shared.download(metadata: metadata, selector: selectorDownloadFile, setFavorite: false, forceDownload: true)
+                            }
                         }
                     }
                 }
+                
+                self.refreshControl.endRefreshing()
+                self.isReloadDataSourceNetworkInProgress = false
+                if metadatasUpdate?.count ?? 0 > 0 || forced {
+                    self.reloadDataSource()
+                } else {
+                    self.collectionView?.reloadData()
+                }
             }
-            
-            self.refreshControl.endRefreshing()
-            self.isReloadDataSourceNetworkInProgress = false
-            if metadatasUpdate?.count ?? 0 > 0 || forced {
-                self.reloadDataSource()
-            } else {
-                self.collectionView?.reloadData()
+
+
+
+        } else {
+            networkReadFolder(forced: forced) { (metadatas, metadatasUpdate, errorCode, errorDescription) in
+                if errorCode == 0 {
+                    for metadata in metadatas ?? [] {
+                        if !metadata.directory {
+                            let localFile = NCManageDatabase.sharedInstance.getTableLocalFile(predicate: NSPredicate(format: "ocId == %@", metadata.ocId))
+                            if (CCUtility.getFavoriteOffline() && localFile == nil) || (localFile != nil && localFile?.etag != metadata.etag) {
+                                NCOperationQueue.shared.download(metadata: metadata, selector: selectorDownloadFile, setFavorite: false, forceDownload: true)
+                            }
+                        }
+                    }
+                }
+                
+                self.refreshControl.endRefreshing()
+                self.isReloadDataSourceNetworkInProgress = false
+                if metadatasUpdate?.count ?? 0 > 0 || forced {
+                    self.reloadDataSource()
+                } else {
+                    self.collectionView?.reloadData()
+                }
             }
         }
+               
+        
     }
 }
 

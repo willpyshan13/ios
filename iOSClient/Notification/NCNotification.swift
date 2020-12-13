@@ -22,7 +22,7 @@
 //
 
 import UIKit
-import NCCommunication
+//mport NCCommunication
 import SwiftyJSON
 
 class NCNotification: UITableViewController, NCNotificationCellDelegate, NCEmptyDataSetDelegate {

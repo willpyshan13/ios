@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4IE-mo-rkp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4IE-mo-rkp">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="10545" y="1217"/>
         </scene>
-        <!--NCMedia.storyboard-->
+        <!--NCFavorite.storyboard-->
         <scene sceneID="udp-lL-CYh">
             <objects>
-                <viewControllerPlaceholder storyboardName="NCMedia" referencedIdentifier="NCMedia.storyboard" id="kO6-hz-Gsq" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="NCFavorite" referencedIdentifier="NCFavorite.storyboard" id="kO6-hz-Gsq" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="3mJ-L2-Cmt"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gG-SV-Hvv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -221,11 +221,11 @@
             </objects>
             <point key="canvasLocation" x="5215" y="327"/>
         </scene>
-        <!--Favorites-->
+        <!--Shares-->
         <scene sceneID="YSr-JF-a0V">
             <objects>
                 <navigationController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="hwM-4d-Afb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" id="o09-67-hwf"/>
+                    <tabBarItem key="tabBarItem" title="Shares" id="o09-67-hwf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="MJw-Bn-5le">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -244,7 +244,7 @@
         <scene sceneID="IuY-Iu-oAm">
             <objects>
                 <navigationController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="Npr-vu-PSD" userLabel="Media" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Media" id="5cw-bP-7It"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" id="5cw-bP-7It"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ixg-Pw-TNO">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -372,20 +372,20 @@
             </objects>
             <point key="canvasLocation" x="10831" y="594"/>
         </scene>
-        <!--NCFiles.storyboard-->
+        <!--NCMyCommonSpaceFiles.storyboard-->
         <scene sceneID="xwl-IR-lkD">
             <objects>
-                <viewControllerPlaceholder storyboardName="NCFiles" referencedIdentifier="NCFiles.storyboard" id="fdj-aV-gGf" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="NCMyCommonSpaceFiles" referencedIdentifier="NCMyCommonSpaceFiles.storyboard" id="fdj-aV-gGf" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Jvo-0f-hQ4"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vst-OD-Y5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5214" y="899"/>
         </scene>
-        <!--NCFavorite.storyboard-->
+        <!--NCDocumentShares.storyboard-->
         <scene sceneID="zqD-Jj-h2w">
             <objects>
-                <viewControllerPlaceholder storyboardName="NCFavorite" referencedIdentifier="NCFavorite.storyboard" id="NEf-S4-8q5" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="NCDocumentShares" referencedIdentifier="NCDocumentShares.storyboard" id="NEf-S4-8q5" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="dts-Zz-Gfr"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnf-oc-B60" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

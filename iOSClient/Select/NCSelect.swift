@@ -22,7 +22,7 @@
 //
 
 import Foundation
-import NCCommunication
+//mport NCCommunication
 
 @objc protocol NCSelectDelegate {
     @objc func dismissSelect(serverUrl: String?, metadata: tableMetadata?, type: String, items: [Any], buttonType: String, overwrite: Bool)

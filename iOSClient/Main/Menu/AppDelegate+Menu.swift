@@ -24,7 +24,7 @@
 //
 
 import FloatingPanel
-import NCCommunication
+//mport NCCommunication
 
 extension AppDelegate: NCAudioRecorderViewControllerDelegate {
     

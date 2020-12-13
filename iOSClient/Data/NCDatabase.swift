@@ -310,6 +310,7 @@ class tableMetadata: Object {
     @objc dynamic var etag = ""
     @objc dynamic var ext = ""
     @objc dynamic var favorite: Bool = false
+    @objc dynamic var spaceDocument: Bool = false
     @objc dynamic var fileId = ""
     @objc dynamic var fileName = ""
     @objc dynamic var fileNameView = ""

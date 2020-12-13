@@ -11,15 +11,6 @@
         }
       },
       {
-        "package": "NCCommunication",
-        "repositoryURL": "https://github.com/nextcloud/ios-communication-library/",
-        "state": {
-          "branch": null,
-          "revision": "3abaa65cf70f7dfa8a7d0df2277d4eda14d7cfd1",
-          "version": "0.84.0"
-        }
-      },
-      {
         "package": "Parchment",
         "repositoryURL": "https://github.com/rechsteiner/Parchment",
         "state": {

@@ -22,7 +22,7 @@
 //
 
 import UIKit
-import NCCommunication
+//mport NCCommunication
 
 class NCCapabilitiesViewController: UIViewController, UIDocumentInteractionControllerDelegate {
 

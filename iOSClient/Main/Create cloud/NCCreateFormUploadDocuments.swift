@@ -22,7 +22,7 @@
 //
 
 import Foundation
-import NCCommunication
+//mport NCCommunication
 
 // MARK: -
 
@@ -417,7 +417,7 @@ import NCCommunication
                     
                     temp.identifier = ""
                     if self.editorId == k_editor_text {
-                        temp.ext = "md"
+                        temp.ext = "txt"
                     } else if self.editorId == k_editor_onlyoffice && self.typeTemplate == k_template_document {
                         temp.ext = "docx"
                     } else if self.editorId == k_editor_onlyoffice && self.typeTemplate == k_template_spreadsheet {

@@ -23,7 +23,7 @@
 
 import Foundation
 import OpenSSL
-import NCCommunication
+//mport NCCommunication
 import Alamofire
 import Queuer
 
@@ -1047,7 +1047,27 @@ import Queuer
                 completion(account, nil, errorCode, errorDescription)
             }
         }
+        
     }
+    
+    @objc func listingDocumentscompletion(serverUrlFileName: String,completion: @escaping (_ account: String, _ metadatas: [tableMetadata]?, _ errorCode: Int, _ errorDescription: String)->()) {
+        
+        NCCommunication.shared.listingDocuments(serverUrlFileName: serverUrlFileName, depth: "1") { (account, files, data, errorCode, errorDescription) in
+ 
+
+            if errorCode == 0 {
+                NCManageDatabase.sharedInstance.convertNCCommunicationFilesToMetadatas(files, useMetadataFolder: false, account: account) { (_, _, metadatas) in
+                    NCManageDatabase.sharedInstance.updateMetadatasSpaceDocument(account: account, metadatas: metadatas)
+                    
+                    completion(account, metadatas, errorCode, errorDescription)
+                }
+            } else {
+                completion(account, nil, errorCode, errorDescription)
+            }
+        }
+        
+    }
+    
     
     //MARK: - WebDav Rename
 

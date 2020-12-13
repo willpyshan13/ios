@@ -24,7 +24,7 @@
 import Foundation
 import UIKit
 import SwiftRichString
-import NCCommunication
+//mport NCCommunication
 
 class NCActivity: UIViewController, NCEmptyDataSetDelegate {
     

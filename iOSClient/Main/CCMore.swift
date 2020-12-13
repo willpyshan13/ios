@@ -23,7 +23,7 @@
 
 
 import UIKit
-import NCCommunication
+//mport NCCommunication
 
 class CCMore: UIViewController, UITableViewDelegate, UITableViewDataSource {
 

@@ -22,7 +22,7 @@
 //
 
 import Foundation
-import NCCommunication
+//mport NCCommunication
 
 class NCCollectionCommon: NSObject, NCSelectDelegate {
     @objc static let shared: NCCollectionCommon = {

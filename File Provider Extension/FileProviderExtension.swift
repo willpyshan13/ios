@@ -22,7 +22,7 @@
 //
 
 import FileProvider
-import NCCommunication
+//mport NCCommunication
 import Alamofire
 
 /* -----------------------------------------------------------------------------------------------------------------------------------------------

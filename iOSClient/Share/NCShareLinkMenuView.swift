@@ -22,7 +22,7 @@
 
 import Foundation
 import FSCalendar
-import NCCommunication
+//mport NCCommunication
 
 class NCShareLinkMenuView: UIView, UIGestureRecognizerDelegate, NCShareNetworkingDelegate, FSCalendarDelegate, FSCalendarDelegateAppearance {
     

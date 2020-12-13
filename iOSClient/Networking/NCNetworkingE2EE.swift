@@ -21,7 +21,7 @@
 
 import Foundation
 import OpenSSL
-import NCCommunication
+//mport NCCommunication
 import CFNetwork
 import Alamofire
 

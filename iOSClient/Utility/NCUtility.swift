@@ -24,7 +24,7 @@
 import Foundation
 import SVGKit
 import KTVHTTPCache
-import NCCommunication
+//mport NCCommunication
 import PDFKit
 
 class NCUtility: NSObject {
@@ -41,6 +41,10 @@ class NCUtility: NSObject {
     
     @objc func getDAV() -> String {
         return "remote.php/dav"
+    }
+    
+    @objc func getDavFileServer(urlBase: String, userId: String) ->String {
+        return urlBase + "/" + self.getDAV() + "/files/" + userId
     }
     
     @objc func getHomeServer(urlBase: String, account: String) -> String {

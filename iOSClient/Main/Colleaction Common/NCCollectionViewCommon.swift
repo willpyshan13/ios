@@ -22,13 +22,21 @@
 //
 
 import Foundation
-import NCCommunication
+//mport NCCommunication
 
 class NCCollectionViewCommon: UIViewController, UIGestureRecognizerDelegate, UISearchResultsUpdating, UISearchControllerDelegate, UISearchBarDelegate, NCListCellDelegate, NCGridCellDelegate, NCSectionHeaderMenuDelegate, NCEmptyDataSetDelegate, UIAdaptivePresentationControllerDelegate  {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
+    internal var isCommonSpace = false
+    internal var isShareSpace = false
+
+    //1 我的空间 2 群组空间 3 公共空间
+    internal var isDocuomentType = 0
+    //1 共享给我的 2 我共享的 3 外部链接
+    internal var shareSpaceType = 0
 
     internal let refreshControl = UIRefreshControl()
     internal var searchController: UISearchController?
@@ -99,10 +107,13 @@ class NCCollectionViewCommon: UIViewController, UIGestureRecognizerDelegate, UIS
         collectionView.register(UINib.init(nibName: "NCListCell", bundle: nil), forCellWithReuseIdentifier: "listCell")
         collectionView.register(UINib.init(nibName: "NCGridCell", bundle: nil), forCellWithReuseIdentifier: "gridCell")
         collectionView.register(UINib.init(nibName: "NCTransferCell", bundle: nil), forCellWithReuseIdentifier: "transferCell")
-
+        collectionView.register(UINib.init(nibName: "NCFileDocumentCell", bundle: nil), forCellWithReuseIdentifier: "fileDocumentCell")
+        collectionView.register(UINib.init(nibName: "NCShareDocumentCell", bundle: nil), forCellWithReuseIdentifier: "shareDocumentCell")
+        
         // Header
         collectionView.register(UINib.init(nibName: "NCSectionHeaderMenu", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "sectionHeaderMenu")
-        
+        collectionView.register(UINib.init(nibName: "NCSectionNoneHeaderMenu", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "sectionNoneHeaderMenu")
+
         // Footer
         collectionView.register(UINib.init(nibName: "NCSectionFooter", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "sectionFooter")
         
@@ -184,13 +195,27 @@ class NCCollectionViewCommon: UIViewController, UIGestureRecognizerDelegate, UIS
         }
         
         setNavigationItem()
-        reloadDataSource()
+        
+        if !isSearching && isCommonSpace {
+            
+        } else if !isSearching && isShareSpace {
+            
+        } else {
+            reloadDataSource()
+        }
+        
     }
         
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        if !isSearching && isCommonSpace {
+            
+        } else if !isSearching && isShareSpace {
+            
+        } else {
+            reloadDataSourceNetwork()
+        }
         
-        reloadDataSourceNetwork()
     }
         
     func presentationControllerDidDismiss( _ presentationController: UIPresentationController) {
@@ -1052,6 +1077,42 @@ extension NCCollectionViewCommon: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        if !isSearching && isCommonSpace {
+            
+            let vcFiles:NCFiles = UIStoryboard(name: "NCFiles", bundle: nil).instantiateInitialViewController() as! NCFiles
+            if indexPath.row == 0 {
+                vcFiles.isDocuomentType = 1
+            } else if indexPath.row == 1 {
+                vcFiles.isDocuomentType = 2
+                vcFiles.titleCurrentFolder = "群组空间"
+            } else if indexPath.row == 2 {
+                vcFiles.isDocuomentType = 3
+                vcFiles.titleCurrentFolder = "公共空间"
+            }
+            vcFiles.isRoot = false
+            vcFiles.serverUrl = NCUtility.shared.getDavFileServer(urlBase: appDelegate.urlBase, userId: appDelegate.userID)
+            self.navigationController?.pushViewController(vcFiles, animated: true)
+            
+            
+            return
+        } else if !isSearching && isShareSpace {
+            let vcShares:NCShares = UIStoryboard(name: "NCShares", bundle: nil).instantiateInitialViewController() as! NCShares
+            if indexPath.row == 0 {
+                vcShares.shareSpaceType = 1
+                vcShares.titleCurrentFolder = "共享给我的"
+            } else if indexPath.row == 1 {
+                vcShares.shareSpaceType = 2
+                vcShares.titleCurrentFolder = "我共享的"
+            } else if indexPath.row == 2 {
+                vcShares.shareSpaceType = 3
+                vcShares.titleCurrentFolder = "外部链接"
+            }
+            self.navigationController?.pushViewController(vcShares, animated: true)
+
+
+            return
+        }
+        
         guard let metadata = dataSource.cellForItemAt(indexPath: indexPath) else { return }
         metadataTouch = metadata
         
@@ -1224,16 +1285,60 @@ extension NCCollectionViewCommon: UICollectionViewDelegate {
 extension NCCollectionViewCommon: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        guard let metadata = dataSource.cellForItemAt(indexPath: indexPath) else { return }
-        NCOperationQueue.shared.downloadThumbnail(metadata: metadata, urlBase: appDelegate.urlBase, view: collectionView, indexPath: indexPath)
+        if !isSearching && isCommonSpace {
+            
+        } else if !isSearching && isShareSpace {
+            
+        } else {
+            guard let metadata = dataSource.cellForItemAt(indexPath: indexPath) else { return }
+            NCOperationQueue.shared.downloadThumbnail(metadata: metadata, urlBase: appDelegate.urlBase, view: collectionView, indexPath: indexPath)
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        guard let metadata = dataSource.cellForItemAt(indexPath: indexPath) else { return }        
-        NCOperationQueue.shared.cancelDownloadThumbnail(metadata: metadata)
+        if !isSearching && isCommonSpace {
+            
+        } else if !isSearching && isShareSpace {
+            
+        } else {
+            guard let metadata = dataSource.cellForItemAt(indexPath: indexPath) else { return }
+            NCOperationQueue.shared.cancelDownloadThumbnail(metadata: metadata)
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        if !isSearching && isCommonSpace {
+
+            
+            if kind == UICollectionView.elementKindSectionHeader {
+                            
+                let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "sectionNoneHeaderMenu", for: indexPath) as! NCSectionNoneHeaderMenu
+
+                return header
+                
+            } else {
+                
+                let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "sectionFooter", for: indexPath) as! NCSectionFooter
+                
+                return footer
+            }
+        } else if !isSearching && isShareSpace {
+            if kind == UICollectionView.elementKindSectionHeader {
+                            
+                let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "sectionNoneHeaderMenu", for: indexPath) as! NCSectionNoneHeaderMenu
+
+                return header
+                
+            } else {
+                
+                let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "sectionFooter", for: indexPath) as! NCSectionFooter
+                
+                return footer
+            }
+        }
         
         if kind == UICollectionView.elementKindSectionHeader {
                         
@@ -1269,16 +1374,54 @@ extension NCCollectionViewCommon: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if !isSearching && isCommonSpace {
+            emptyDataSet?.numberOfItemsInSection(3, section: 0)
+            return 3
+        } else if !isSearching && isShareSpace {
+            emptyDataSet?.numberOfItemsInSection(3, section: 0)
+            return 3
+        }
+        
         let numberItems = dataSource.numberOfItems()
         emptyDataSet?.numberOfItemsInSection(numberItems, section: section)
         return numberItems
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-                
+             
+        if !isSearching && isCommonSpace{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fileDocumentCell", for: indexPath) as! NCFileDocumentCell
+            cell.imageItem.image = UIImage.init(named: "folder_group")
+            if indexPath.row == 0 {
+                cell.labelTitle.text = "我的空间"
+            } else if indexPath.row == 1 {
+                cell.labelTitle.text = "群组空间"
+            } else if indexPath.row == 2 {
+                cell.labelTitle.text = "公共空间"
+            }
+            
+            return cell
+        } else if !isSearching && isShareSpace {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "shareDocumentCell", for: indexPath) as! NCShareDocumentCell
+            if indexPath.row == 0 {
+                cell.labelTitle.text = "共享给我的"
+                cell.imageItem.image = UIImage.init(named: "share_icon3")
+            } else if indexPath.row == 1 {
+                cell.labelTitle.text = "我共享的"
+                cell.imageItem.image = UIImage.init(named: "share_icon1")
+            } else if indexPath.row == 2 {
+                cell.labelTitle.text = "外部链接"
+                cell.imageItem.image = UIImage.init(named: "share_icon2")
+            }
+            
+            return cell
+        }
+        
         guard let metadata = dataSource.cellForItemAt(indexPath: indexPath) else {
             return UICollectionViewCell()
         }
+        
+        
         
         var tableShare: tableShare?
         var isShare = false
@@ -1599,6 +1742,12 @@ extension NCCollectionViewCommon: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         
+        if !isSearching && isCommonSpace {
+            return CGSize(width: 0, height: 0)
+        } else if !isSearching && isShareSpace {
+            return CGSize(width: 0, height: 0)
+        }
+        
         headerRichWorkspaceHeight = 0
         
         if let richWorkspaceText = richWorkspaceText {
@@ -1612,6 +1761,11 @@ extension NCCollectionViewCommon: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        if !isSearching && isCommonSpace {
+            return CGSize(width: 0, height: 0)
+        } else if !isSearching && isShareSpace {
+            return CGSize(width: 0, height: 0)
+        }
         return CGSize(width: collectionView.frame.width, height: footerHeight)
     }
 }

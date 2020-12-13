@@ -22,7 +22,7 @@
 //
 
 import Foundation
-import NCCommunication
+//mport NCCommunication
 
 class NCFavorite: NCCollectionViewCommon  {
     
@@ -120,4 +120,3 @@ class NCFavorite: NCCollectionViewCommon  {
         }
     }
 }
-

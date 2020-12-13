@@ -21,7 +21,7 @@
 //
 
 import Foundation
-import NCCommunication
+//mport NCCommunication
 
 @objc class NCNetworkingCheckRemoteUser: NSObject {
     @objc public static let shared: NCNetworkingCheckRemoteUser = {

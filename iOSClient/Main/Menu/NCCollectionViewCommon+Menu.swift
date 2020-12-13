@@ -24,7 +24,7 @@
 //
 
 import FloatingPanel
-import NCCommunication
+//import NCCommunication
 
 extension NCCollectionViewCommon {
 

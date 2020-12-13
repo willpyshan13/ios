@@ -22,7 +22,7 @@
 //
 
 import Foundation
-import NCCommunication
+//mport NCCommunication
 
 @objc protocol NCEndToEndInitializeDelegate {
     

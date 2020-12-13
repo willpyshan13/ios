@@ -24,7 +24,7 @@
 
 import Foundation
 import Queuer
-import NCCommunication
+//mport NCCommunication
 
 @objc class NCOperationQueue: NSObject {
     @objc public static let shared: NCOperationQueue = {

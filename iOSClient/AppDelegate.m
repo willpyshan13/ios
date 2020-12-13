@@ -823,44 +823,44 @@
 {
     BOOL handled = NO;
     
-    NSString *bundleId = [NSBundle mainBundle].bundleIdentifier;
-    NSString *shortcutMedia = [NSString stringWithFormat:@"%@.media", bundleId];
-    
-    if ([shortcutItem.type isEqualToString:shortcutMedia] && self.account) {
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-
-            UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-            if ([splitViewController isKindOfClass:[UISplitViewController class]]) {
-                UINavigationController *navigationControllerMaster = (UINavigationController *)splitViewController.viewControllers.firstObject;
-                if ([navigationControllerMaster isKindOfClass:[UINavigationController class]]) {
-                    UITabBarController *tabBarController = (UITabBarController *)navigationControllerMaster.topViewController;
-                     if ([tabBarController isKindOfClass:[UITabBarController class]]) {
-                         
-                         if (splitViewController.isCollapsed) {
-                                         
-                             [navigationControllerMaster popToRootViewControllerAnimated:false];
-                             UINavigationController *navigationControllerMaster = (UINavigationController *)splitViewController.viewControllers.firstObject;
-                             if ([navigationControllerMaster isKindOfClass:[UINavigationController class]]) {
-                                 UITabBarController *tabBarController = (UITabBarController *)navigationControllerMaster.topViewController;
-                                 if ([tabBarController isKindOfClass:[UITabBarController class]]) {
-                                     [tabBarController setSelectedIndex: k_tabBarApplicationIndexMedia];
-                                 }
-                             }
-                        
-                         } else {
-                         
-                             if ([tabBarController isKindOfClass:[UITabBarController class]]) {
-                                 [tabBarController setSelectedIndex: k_tabBarApplicationIndexMedia];
-                             }
-                         }
-                     }
-                }
-            }
-        });
-        
-        handled = YES;
-    }
+//    NSString *bundleId = [NSBundle mainBundle].bundleIdentifier;
+//    NSString *shortcutMedia = [NSString stringWithFormat:@"%@.media", bundleId];
+//    
+//    if ([shortcutItem.type isEqualToString:shortcutMedia] && self.account) {
+//        
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//
+//            UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+//            if ([splitViewController isKindOfClass:[UISplitViewController class]]) {
+//                UINavigationController *navigationControllerMaster = (UINavigationController *)splitViewController.viewControllers.firstObject;
+//                if ([navigationControllerMaster isKindOfClass:[UINavigationController class]]) {
+//                    UITabBarController *tabBarController = (UITabBarController *)navigationControllerMaster.topViewController;
+//                     if ([tabBarController isKindOfClass:[UITabBarController class]]) {
+//                         
+//                         if (splitViewController.isCollapsed) {
+//                                         
+//                             [navigationControllerMaster popToRootViewControllerAnimated:false];
+//                             UINavigationController *navigationControllerMaster = (UINavigationController *)splitViewController.viewControllers.firstObject;
+//                             if ([navigationControllerMaster isKindOfClass:[UINavigationController class]]) {
+//                                 UITabBarController *tabBarController = (UITabBarController *)navigationControllerMaster.topViewController;
+//                                 if ([tabBarController isKindOfClass:[UITabBarController class]]) {
+//                                     [tabBarController setSelectedIndex: k_tabBarApplicationIndexMedia];
+//                                 }
+//                             }
+//                        
+//                         } else {
+//                         
+//                             if ([tabBarController isKindOfClass:[UITabBarController class]]) {
+//                                 [tabBarController setSelectedIndex: k_tabBarApplicationIndexMedia];
+//                             }
+//                         }
+//                     }
+//                }
+//            }
+//        });
+//        
+//        handled = YES;
+//    }
     
     return handled;
 }
@@ -926,9 +926,9 @@
     item.enabled = false;
     
     // Media
-    item = [tabBarController.tabBar.items objectAtIndex: k_tabBarApplicationIndexMedia];
-    [item setTitle:NSLocalizedString(@"_media_", nil)];
-    item.image = [CCGraphics changeThemingColorImage:[UIImage imageNamed:@"media"] width:50 height:50 color:NCBrandColor.sharedInstance.brandElement];
+    item = [tabBarController.tabBar.items objectAtIndex: k_tabBarApplicationIndexShare];
+    [item setTitle:NSLocalizedString(@"_share_", nil)];
+    item.image = [CCGraphics changeThemingColorImage:[UIImage imageNamed:@"share"] width:50 height:50 color:NCBrandColor.sharedInstance.brandElement];
     item.selectedImage = item.image;
     
     // More
@@ -1365,16 +1365,16 @@
     self.maintenanceMode = mode;
 }
 
-- (NSString *)urlBase {
-    if (self.currentNetworkStatus == ReachableViaWiFi) {
-        if (self.isOK && self.wifiUrlIp.length > 0) {
-            
-//            NSLog(@"使用wifi ip ------------");
-            
-            return self.wifiUrlIp;
-        }
-    }
-    return _urlBase;
-}
+//- (NSString *)urlBase {
+//    if (self.currentNetworkStatus == ReachableViaWiFi) {
+//        if (self.isOK && self.wifiUrlIp.length > 0) {
+//            
+////            NSLog(@"使用wifi ip ------------");
+//            
+//            return self.wifiUrlIp;
+//        }
+//    }
+//    return _urlBase;
+//}
 
 @end

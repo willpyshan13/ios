@@ -77,6 +77,44 @@
                 if (dic && [dic isKindOfClass:NSDictionary.class]) {
                     NSString *status = dic[@"status"];
                     
+//                    if (status && [status isEqualToString:@"ok"]) {
+//                        appdelegate.isOK = YES;
+//                    }
+                } else {
+                }
+
+            });
+
+
+        }
+    }];
+    [dataTask resume];  //开始请求
+    
+}
+
++ (void)getShareData {
+    AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+
+    NSString *urlstring = [NSString stringWithFormat:@"%@/ocs/v1.php/apps/files_sharing/api/v1/shares?format=xml&shared_with_me=false&include_tags=true",appdelegate.urlBase];
+    
+    NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlstring] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
+    //设置请求类型
+    request.HTTPMethod = @"GET";
+//    [request setValue:@"application/json" forHTTPHeaderField:@"content-type"];//请求头
+
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error) {
+            
+        } else {
+            //请求成功
+            NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (dic && [dic isKindOfClass:NSDictionary.class]) {
+                    NSString *status = dic[@"status"];
+                    
                     if (status && [status isEqualToString:@"ok"]) {
                         appdelegate.isOK = YES;
                     }
@@ -89,7 +127,6 @@
         }
     }];
     [dataTask resume];  //开始请求
-    
 }
 
 @end
