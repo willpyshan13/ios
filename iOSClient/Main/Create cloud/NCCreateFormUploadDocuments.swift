@@ -57,7 +57,7 @@ import Foundation
         super.viewDidLoad()
         
         if serverUrl == NCUtility.shared.getHomeServer(urlBase: appDelegate.urlBase, account: appDelegate.account) {
-            fileNameFolder = "/"
+            
         } else {
             fileNameFolder = (serverUrl as NSString).lastPathComponent
         }

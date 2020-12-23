@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EFX-fO-Oip">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EFX-fO-Oip">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,6 +31,18 @@
                                     <outlet property="delegate" destination="EFX-fO-Oip" id="s3n-CL-8X2"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qa7-Em-G0M">
+                                <rect key="frame" x="320" y="688" width="40" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="avz-iV-sAO"/>
+                                    <constraint firstAttribute="height" constant="40" id="w8s-c0-Khj"/>
+                                </constraints>
+                                <state key="normal" image="tabBarPlus_1"/>
+                                <connections>
+                                    <action selector="addFiles:" destination="EFX-fO-Oip" eventType="touchUpInside" id="IF1-Lj-vPe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Meh-VD-wWh"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -38,10 +50,13 @@
                             <constraint firstItem="Zaz-Cl-qpZ" firstAttribute="leading" secondItem="Meh-VD-wWh" secondAttribute="leading" id="1bp-sm-u0X"/>
                             <constraint firstItem="Meh-VD-wWh" firstAttribute="trailing" secondItem="Zaz-Cl-qpZ" secondAttribute="trailing" id="aNd-UL-hmu"/>
                             <constraint firstItem="Meh-VD-wWh" firstAttribute="bottom" secondItem="Zaz-Cl-qpZ" secondAttribute="bottom" constant="-34" id="aNr-tf-2AH"/>
+                            <constraint firstItem="Meh-VD-wWh" firstAttribute="bottom" secondItem="qa7-Em-G0M" secondAttribute="bottom" constant="50" id="ade-qx-ydU"/>
                             <constraint firstItem="Zaz-Cl-qpZ" firstAttribute="top" secondItem="QEs-gO-Cmp" secondAttribute="top" id="tji-wt-R7s"/>
+                            <constraint firstItem="Meh-VD-wWh" firstAttribute="trailing" secondItem="qa7-Em-G0M" secondAttribute="trailing" constant="15" id="urM-HS-lAi"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="qa7-Em-G0M" id="ffE-se-48x"/>
                         <outlet property="collectionView" destination="Zaz-Cl-qpZ" id="8oA-Gx-z7T"/>
                         <segue destination="rIl-hI-jAh" kind="showDetail" identifier="segueDetail" id="MHI-ti-PGq"/>
                     </connections>
@@ -59,4 +74,7 @@
             <point key="canvasLocation" x="1080" y="228"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabBarPlus_1" width="80" height="80"/>
+    </resources>
 </document>

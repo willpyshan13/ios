@@ -26,7 +26,10 @@ import Foundation
 
 class NCFiles: NCCollectionViewCommon  {
     
+    @IBOutlet weak var addButton: UIButton!
+
     internal var isRoot: Bool = true
+    
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -50,6 +53,19 @@ class NCFiles: NCCollectionViewCommon  {
         
         super.viewWillAppear(animated)
         
+        if isDocuomentType == 1 {
+            self.addButton.isHidden = false
+        } else if isDocuomentType == 2 || isDocuomentType == 3 {
+            self.addButton.isHidden = true
+        } else {
+            self.addButton.isHidden = false
+        }
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.addButton.layer.cornerRadius = 20
     }
     
     // MARK: - NotificationCenter
@@ -63,6 +79,12 @@ class NCFiles: NCCollectionViewCommon  {
         }
         
         super.initializeMain()
+    }
+    
+    @IBAction func addFiles(_ sender:Any) {
+        
+        appDelegate.handleTouchTabbarCenter(sender)
+        
     }
     
     // MARK: - DataSource + NC Endpoint
@@ -131,7 +153,7 @@ class NCFiles: NCCollectionViewCommon  {
         isReloadDataSourceNetworkInProgress = true
         collectionView?.reloadData()
         
-        if isDocuomentType == 1 {
+        if isDocuomentType > 0{
             
             networkReadFolder(forced: forced) { (metadatas, metadatasUpdate, errorCode, errorDescription) in
                 if errorCode == 0 {

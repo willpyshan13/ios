@@ -165,6 +165,7 @@
 // Maintenance Mode
 - (void)maintenanceMode:(BOOL)mode;
 
+- (void)handleTouchTabbarCenter:(id)sender;
 
 
 @end

@@ -148,6 +148,8 @@
         _password.hidden = YES;
         self.navigationItem.leftBarButtonItem = cancelButton;
     }
+    
+    self.loginTypeView.hidden = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated

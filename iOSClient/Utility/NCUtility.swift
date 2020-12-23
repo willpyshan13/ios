@@ -39,6 +39,7 @@ class NCUtility: NSObject {
         return NCManageDatabase.sharedInstance.getCapabilitiesServerString(account: account, elements: NCElementsJSON.shared.capabilitiesWebDavRoot) ?? "remote.php/webdav"
     }
     
+    
     @objc func getDAV() -> String {
         return "remote.php/dav"
     }

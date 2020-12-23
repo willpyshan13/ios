@@ -185,9 +185,9 @@
 // TabBar button
 #define k_tabBarApplicationIndexFile                    0
 #define k_tabBarApplicationIndexShare                   1
-#define k_tabBarApplicationIndexPlusHide                2
-#define k_tabBarApplicationIndexFavorite                3
-#define k_tabBarApplicationIndexMore                    4
+//#define k_tabBarApplicationIndexPlusHide                2
+#define k_tabBarApplicationIndexFavorite                2
+#define k_tabBarApplicationIndexMore                    3
 
 // Filename Mask and Type
 #define k_keyFileNameMask                               @"fileNameMask"

@@ -316,7 +316,7 @@
 "_connection_error_"            = "Connection error";
 "_serverstatus_error_"          = "Connection to server failure, verify your server address or network status";
 "_add_your_nextcloud_"          = "Add your Qijicloud account";
-"_login_url_"                   = "Server address https://…";
+"_login_url_"                   = "Server address http://…";
 "_forgot_password_"             = "forgot password";
 "_reset_password_"             = "reset password";
 "_back_login_"             = "back to login";

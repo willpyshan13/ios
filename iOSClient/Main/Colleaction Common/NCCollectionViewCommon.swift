@@ -38,6 +38,8 @@ class NCCollectionViewCommon: UIViewController, UIGestureRecognizerDelegate, UIS
     //1 共享给我的 2 我共享的 3 外部链接
     internal var shareSpaceType = 0
 
+    internal var isShowAddButton = false
+
     internal let refreshControl = UIRefreshControl()
     internal var searchController: UISearchController?
     internal var emptyDataSet: NCEmptyDataSet?
@@ -178,7 +180,9 @@ class NCCollectionViewCommon: UIViewController, UIGestureRecognizerDelegate, UIS
         if serverUrl == "" {
             appDelegate.activeServerUrl = NCUtility.shared.getHomeServer(urlBase: appDelegate.urlBase, account: appDelegate.account)
         } else {
+        
             appDelegate.activeServerUrl = serverUrl
+            
         }
         
         appDelegate.activeViewController = self
@@ -267,6 +271,7 @@ class NCCollectionViewCommon: UIViewController, UIGestureRecognizerDelegate, UIS
             if serverUrl == "" {
                 appDelegate.activeServerUrl = NCUtility.shared.getHomeServer(urlBase: appDelegate.urlBase, account: appDelegate.account)
             } else {
+
                 appDelegate.activeServerUrl = serverUrl
             }
         }
@@ -1090,7 +1095,9 @@ extension NCCollectionViewCommon: UICollectionViewDelegate {
                 vcFiles.titleCurrentFolder = "公共空间"
             }
             vcFiles.isRoot = false
-            vcFiles.serverUrl = NCUtility.shared.getDavFileServer(urlBase: appDelegate.urlBase, userId: appDelegate.userID)
+//            vcFiles.serverUrl = NCUtility.shared.getDavFileServer(urlBase: appDelegate.urlBase, userId: appDelegate.userID)
+            vcFiles.serverUrl = NCUtility.shared.getHomeServer(urlBase: appDelegate.urlBase, account: appDelegate.account)
+
             self.navigationController?.pushViewController(vcFiles, animated: true)
             
             
@@ -1141,6 +1148,11 @@ extension NCCollectionViewCommon: UICollectionViewDelegate {
                 
                 if let viewController = appDelegate.listFilesVC.value(forKey: serverUrlPush) {
                     guard let vcFiles = (viewController as? NCFiles) else { return }
+                    if isDocuomentType == 1  {
+                        vcFiles.isShowAddButton = true
+                    } else if (isShowAddButton == true) {
+                        vcFiles.isShowAddButton = true
+                    }
                     
                     if vcFiles.isViewLoaded {
                         self.navigationController?.pushViewController(vcFiles, animated: true)
@@ -1149,6 +1161,11 @@ extension NCCollectionViewCommon: UICollectionViewDelegate {
                 } else {
                     
                     let vcFiles:NCFiles = UIStoryboard(name: "NCFiles", bundle: nil).instantiateInitialViewController() as! NCFiles
+                    if isDocuomentType == 1  {
+                        vcFiles.isShowAddButton = true
+                    } else if (isShowAddButton == true) {
+                        vcFiles.isShowAddButton = true
+                    }
                     
                     vcFiles.isRoot = false
                     vcFiles.serverUrl = serverUrlPush
@@ -1393,10 +1410,13 @@ extension NCCollectionViewCommon: UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fileDocumentCell", for: indexPath) as! NCFileDocumentCell
             cell.imageItem.image = UIImage.init(named: "folder_group")
             if indexPath.row == 0 {
+                cell.imageItem.image = UIImage.init(named: "myfile")
                 cell.labelTitle.text = "我的空间"
             } else if indexPath.row == 1 {
+                cell.imageItem.image = UIImage.init(named: "groupfile")
                 cell.labelTitle.text = "群组空间"
             } else if indexPath.row == 2 {
+                cell.imageItem.image = UIImage.init(named: "ggfile")
                 cell.labelTitle.text = "公共空间"
             }
             

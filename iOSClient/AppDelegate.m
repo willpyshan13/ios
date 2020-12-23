@@ -919,11 +919,11 @@
     item.image = [CCGraphics changeThemingColorImage:[UIImage imageNamed:@"favorite"] width:50 height:50 color:NCBrandColor.sharedInstance.brandElement];
     item.selectedImage = item.image;
     
-    // (PLUS INVISIBLE)
-    item = [tabBarController.tabBar.items objectAtIndex: k_tabBarApplicationIndexPlusHide];
-    item.title = @"";
-    item.image = nil;
-    item.enabled = false;
+//    // (PLUS INVISIBLE)
+//    item = [tabBarController.tabBar.items objectAtIndex: k_tabBarApplicationIndexPlusHide];
+//    item.title = @"";
+//    item.image = nil;
+//    item.enabled = false;
     
     // Media
     item = [tabBarController.tabBar.items objectAtIndex: k_tabBarApplicationIndexShare];
@@ -938,56 +938,56 @@
     item.selectedImage = item.image;
     
     // Plus Button
-    int buttonSize = 57;
-    UIImage *buttonImage = [CCGraphics changeThemingColorImage:[UIImage imageNamed:@"tabBarPlus"] width:120 height:120 color:UIColor.whiteColor];
-    UIButton *buttonPlus = [UIButton buttonWithType:UIButtonTypeCustom];
-    buttonPlus.tag = 99;
-    buttonPlus.accessibilityLabel = NSLocalizedString(@"_accessibility_add_upload_", nil);
-    [buttonPlus setImage:buttonImage forState:UIControlStateNormal];
-    buttonPlus.backgroundColor = NCBrandColor.sharedInstance.brandElement;
-    buttonPlus.layer.cornerRadius = buttonSize / 2;
-    buttonPlus.layer.masksToBounds = NO;
-    buttonPlus.layer.shadowOffset = CGSizeMake(0, 0);
-    buttonPlus.layer.shadowRadius = 3.0f;
-    buttonPlus.layer.shadowOpacity = 0.5;
+//    int buttonSize = 57;
+//    UIImage *buttonImage = [CCGraphics changeThemingColorImage:[UIImage imageNamed:@"tabBarPlus"] width:120 height:120 color:UIColor.whiteColor];
+//    UIButton *buttonPlus = [UIButton buttonWithType:UIButtonTypeCustom];
+//    buttonPlus.tag = 99;
+//    buttonPlus.accessibilityLabel = NSLocalizedString(@"_accessibility_add_upload_", nil);
+//    [buttonPlus setImage:buttonImage forState:UIControlStateNormal];
+//    buttonPlus.backgroundColor = NCBrandColor.sharedInstance.brandElement;
+//    buttonPlus.layer.cornerRadius = buttonSize / 2;
+//    buttonPlus.layer.masksToBounds = NO;
+//    buttonPlus.layer.shadowOffset = CGSizeMake(0, 0);
+//    buttonPlus.layer.shadowRadius = 3.0f;
+//    buttonPlus.layer.shadowOpacity = 0.5;
+//
+//
+//    [buttonPlus addTarget:self action:@selector(handleTouchTabbarCenter:) forControlEvents:UIControlEventTouchUpInside];
+//
+//    [buttonPlus setTranslatesAutoresizingMaskIntoConstraints:NO];
+//    [tabBarController.tabBar addSubview:buttonPlus];
     
 
-    [buttonPlus addTarget:self action:@selector(handleTouchTabbarCenter:) forControlEvents:UIControlEventTouchUpInside];
-    
-    [buttonPlus setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [tabBarController.tabBar addSubview:buttonPlus];
-    
-
-    if (safeAreaBottom > 0) {
-        
-        // X
-        constraint = [NSLayoutConstraint constraintWithItem:buttonPlus attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:tabBarController.tabBar attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
-        [tabBarController.view addConstraint:constraint];
-        // Y
-        constraint = [NSLayoutConstraint constraintWithItem:buttonPlus attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:tabBarController.tabBar attribute:NSLayoutAttributeTop multiplier:1.0 constant:-(buttonSize / 2)];
-        [tabBarController.view addConstraint:constraint];
-        // Width
-        constraint = [NSLayoutConstraint constraintWithItem:buttonPlus attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:0 multiplier:1.0 constant:buttonSize];
-        [tabBarController.view addConstraint:constraint];
-        // Height
-        constraint = [NSLayoutConstraint constraintWithItem:buttonPlus attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:0 multiplier:1.0 constant:buttonSize];
-        [tabBarController.view addConstraint:constraint];
-        
-    } else {
-        
-        // X
-        constraint = [NSLayoutConstraint constraintWithItem:buttonPlus attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:tabBarController.tabBar attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
-        [tabBarController.view addConstraint:constraint];
-        // Y
-        constraint = [NSLayoutConstraint constraintWithItem:buttonPlus attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:tabBarController.tabBar attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:-(buttonSize / 2)];
-        [tabBarController.view addConstraint:constraint];
-        // Width
-        constraint = [NSLayoutConstraint constraintWithItem:buttonPlus attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:0 multiplier:1.0 constant:buttonSize];
-        [tabBarController.view addConstraint:constraint];
-        // Height
-        constraint = [NSLayoutConstraint constraintWithItem:buttonPlus attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:0 multiplier:1.0 constant:buttonSize];
-        [tabBarController.view addConstraint:constraint];
-    }
+//    if (safeAreaBottom > 0) {
+//
+//        // X
+//        constraint = [NSLayoutConstraint constraintWithItem:buttonPlus attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:tabBarController.tabBar attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
+//        [tabBarController.view addConstraint:constraint];
+//        // Y
+//        constraint = [NSLayoutConstraint constraintWithItem:buttonPlus attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:tabBarController.tabBar attribute:NSLayoutAttributeTop multiplier:1.0 constant:-(buttonSize / 2)];
+//        [tabBarController.view addConstraint:constraint];
+//        // Width
+//        constraint = [NSLayoutConstraint constraintWithItem:buttonPlus attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:0 multiplier:1.0 constant:buttonSize];
+//        [tabBarController.view addConstraint:constraint];
+//        // Height
+//        constraint = [NSLayoutConstraint constraintWithItem:buttonPlus attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:0 multiplier:1.0 constant:buttonSize];
+//        [tabBarController.view addConstraint:constraint];
+//
+//    } else {
+//
+//        // X
+//        constraint = [NSLayoutConstraint constraintWithItem:buttonPlus attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:tabBarController.tabBar attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
+//        [tabBarController.view addConstraint:constraint];
+//        // Y
+//        constraint = [NSLayoutConstraint constraintWithItem:buttonPlus attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:tabBarController.tabBar attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:-(buttonSize / 2)];
+//        [tabBarController.view addConstraint:constraint];
+//        // Width
+//        constraint = [NSLayoutConstraint constraintWithItem:buttonPlus attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:0 multiplier:1.0 constant:buttonSize];
+//        [tabBarController.view addConstraint:constraint];
+//        // Height
+//        constraint = [NSLayoutConstraint constraintWithItem:buttonPlus attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:0 multiplier:1.0 constant:buttonSize];
+//        [tabBarController.view addConstraint:constraint];
+//    }
 }
 
 - (void)handleTouchTabbarCenter:(id)sender
