@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,13 +33,14 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qa7-Em-G0M">
-                                <rect key="frame" x="320" y="688" width="40" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="315" y="718" width="40" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="avz-iV-sAO"/>
                                     <constraint firstAttribute="height" constant="40" id="w8s-c0-Khj"/>
                                 </constraints>
-                                <state key="normal" image="tabBarPlus_1"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="tabBarPlus"/>
                                 <connections>
                                     <action selector="addFiles:" destination="EFX-fO-Oip" eventType="touchUpInside" id="IF1-Lj-vPe"/>
                                 </connections>
@@ -50,9 +52,9 @@
                             <constraint firstItem="Zaz-Cl-qpZ" firstAttribute="leading" secondItem="Meh-VD-wWh" secondAttribute="leading" id="1bp-sm-u0X"/>
                             <constraint firstItem="Meh-VD-wWh" firstAttribute="trailing" secondItem="Zaz-Cl-qpZ" secondAttribute="trailing" id="aNd-UL-hmu"/>
                             <constraint firstItem="Meh-VD-wWh" firstAttribute="bottom" secondItem="Zaz-Cl-qpZ" secondAttribute="bottom" constant="-34" id="aNr-tf-2AH"/>
-                            <constraint firstItem="Meh-VD-wWh" firstAttribute="bottom" secondItem="qa7-Em-G0M" secondAttribute="bottom" constant="50" id="ade-qx-ydU"/>
+                            <constraint firstItem="Meh-VD-wWh" firstAttribute="bottom" secondItem="qa7-Em-G0M" secondAttribute="bottom" constant="20" id="ade-qx-ydU"/>
                             <constraint firstItem="Zaz-Cl-qpZ" firstAttribute="top" secondItem="QEs-gO-Cmp" secondAttribute="top" id="tji-wt-R7s"/>
-                            <constraint firstItem="Meh-VD-wWh" firstAttribute="trailing" secondItem="qa7-Em-G0M" secondAttribute="trailing" constant="15" id="urM-HS-lAi"/>
+                            <constraint firstItem="Meh-VD-wWh" firstAttribute="trailing" secondItem="qa7-Em-G0M" secondAttribute="trailing" constant="20" id="urM-HS-lAi"/>
                         </constraints>
                     </view>
                     <connections>
@@ -75,6 +77,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tabBarPlus_1" width="80" height="80"/>
+        <image name="tabBarPlus" width="80" height="80"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

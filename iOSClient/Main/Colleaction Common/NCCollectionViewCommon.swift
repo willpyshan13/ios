@@ -1087,6 +1087,7 @@ extension NCCollectionViewCommon: UICollectionViewDelegate {
             let vcFiles:NCFiles = UIStoryboard(name: "NCFiles", bundle: nil).instantiateInitialViewController() as! NCFiles
             if indexPath.row == 0 {
                 vcFiles.isDocuomentType = 1
+                vcFiles.titleCurrentFolder = "我的空间"
             } else if indexPath.row == 1 {
                 vcFiles.isDocuomentType = 2
                 vcFiles.titleCurrentFolder = "群组空间"
@@ -1408,6 +1409,7 @@ extension NCCollectionViewCommon: UICollectionViewDataSource {
              
         if !isSearching && isCommonSpace{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fileDocumentCell", for: indexPath) as! NCFileDocumentCell
+            cell.labelTitle.textColor = NCBrandColor.sharedInstance.textView
             cell.imageItem.image = UIImage.init(named: "folder_group")
             if indexPath.row == 0 {
                 cell.imageItem.image = UIImage.init(named: "myfile")
@@ -1423,6 +1425,7 @@ extension NCCollectionViewCommon: UICollectionViewDataSource {
             return cell
         } else if !isSearching && isShareSpace {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "shareDocumentCell", for: indexPath) as! NCShareDocumentCell
+            cell.labelTitle.textColor = NCBrandColor.sharedInstance.textView
             if indexPath.row == 0 {
                 cell.labelTitle.text = "共享给我的"
                 cell.imageItem.image = UIImage.init(named: "share_icon3")

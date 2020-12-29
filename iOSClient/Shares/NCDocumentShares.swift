@@ -17,7 +17,7 @@ class NCDocumentShares: NCCollectionViewCommon  {
         super.init(coder: aDecoder)
         isShareSpace = true
 //        appDelegate.activeFiles = self
-        titleCurrentFolder = NCBrandOptions.sharedInstance.brand
+        titleCurrentFolder = "共享"//NCBrandOptions.sharedInstance.brand
         layoutKey = k_layout_view_files
         enableSearchBar = true
         emptyImage = CCGraphics.changeThemingColorImage(UIImage.init(named: "folder"), width: 300, height: 300, color: NCBrandColor.sharedInstance.brandElement)

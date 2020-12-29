@@ -97,6 +97,9 @@ class NCIntroViewController: UIViewController, UICollectionViewDataSource, UICol
         self.pageControl.numberOfPages = self.titles.count
         self.view.backgroundColor = NCBrandColor.sharedInstance.customer
         self.timerAutoScroll = Timer.scheduledTimer(timeInterval: 5, target: self, selector: (#selector(NCIntroViewController.autoScroll)), userInfo: nil, repeats: true)
+        
+        self.buttonSignUp.isHidden = true
+        self.buttonHost.isHidden = true
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

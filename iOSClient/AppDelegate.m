@@ -928,7 +928,7 @@
     // Media
     item = [tabBarController.tabBar.items objectAtIndex: k_tabBarApplicationIndexShare];
     [item setTitle:NSLocalizedString(@"_share_", nil)];
-    item.image = [CCGraphics changeThemingColorImage:[UIImage imageNamed:@"share"] width:50 height:50 color:NCBrandColor.sharedInstance.brandElement];
+    item.image = [CCGraphics changeThemingColorImage:[UIImage imageNamed:@"shareTab1"] width:50 height:50 color:NCBrandColor.sharedInstance.brandElement];
     item.selectedImage = item.image;
     
     // More
