@@ -25,6 +25,7 @@ import Foundation
 //mport NCCommunication
 
 class NCCollectionViewCommon: UIViewController, UIGestureRecognizerDelegate, UISearchResultsUpdating, UISearchControllerDelegate, UISearchBarDelegate, NCListCellDelegate, NCGridCellDelegate, NCSectionHeaderMenuDelegate, NCEmptyDataSetDelegate, UIAdaptivePresentationControllerDelegate  {
+    
 
     @IBOutlet weak var collectionView: UICollectionView!
 
@@ -1258,6 +1259,32 @@ extension NCCollectionViewCommon: UICollectionViewDelegate {
                 self.navigationController?.pushViewController(vcFileViewInFolder, animated: true)
             }
             
+            if layoutKey == k_layout_view_shares {
+                
+                if let viewController = appDelegate.listFilesVC.value(forKey: serverUrlPush) {
+                    guard let vcFiles = (viewController as? NCShares) else { return }
+                    
+                    
+                    if vcFiles.isViewLoaded {
+                        self.navigationController?.pushViewController(vcFiles, animated: true)
+                    }
+                    
+                } else {
+                    
+                    let vcFiles:NCShares = UIStoryboard(name: "NCShares", bundle: nil).instantiateInitialViewController() as! NCShares
+                    
+//                    vcFiles.isRoot = false
+                    vcFiles.serverUrl = serverUrlPush
+                    vcFiles.titleCurrentFolder = metadataTouch!.fileNameView
+                    
+                    appDelegate.listFilesVC.setValue(vcFiles, forKey: serverUrlPush)
+                    
+                    self.navigationController?.pushViewController(vcFiles, animated: true)
+                }
+            }
+            
+            
+            
         } else {
             
             if metadata.typeFile == k_metadataTypeFile_video {
@@ -1791,4 +1818,6 @@ extension NCCollectionViewCommon: UICollectionViewDelegateFlowLayout {
         }
         return CGSize(width: collectionView.frame.width, height: footerHeight)
     }
+    
+    
 }
