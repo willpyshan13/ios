@@ -60,7 +60,7 @@ class NCShare: UIViewController, UIGestureRecognizerDelegate, NCShareLinkCellDel
         searchFieldTopConstraint.constant = 10
         
         searchField.placeholder = NSLocalizedString("_shareLinksearch_placeholder_", comment: "")
-        
+        searchField.returnKeyType = .done
         shareLinkImage.image = NCShareCommon.sharedInstance.createLinkAvatar(imageName: "sharebylink", colorCircle: NCBrandColor.sharedInstance.brandElement)
         shareLinkLabel.text = NSLocalizedString("_share_link_", comment: "")
         buttonCopy.setImage(CCGraphics.changeThemingColorImage(UIImage.init(named: "shareCopy"), width: 100, height: 100, color: .gray), for: .normal)

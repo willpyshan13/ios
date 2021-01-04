@@ -17,7 +17,7 @@ class NCMyCommonSpaceFiles: NCCollectionViewCommon  {
         super.init(coder: aDecoder)
         isCommonSpace = true
 //        appDelegate.activeFiles = self
-        titleCurrentFolder = NCBrandOptions.sharedInstance.brand
+        titleCurrentFolder = "文件"
         layoutKey = k_layout_view_files
         enableSearchBar = true
         emptyImage = CCGraphics.changeThemingColorImage(UIImage.init(named: "folder"), width: 300, height: 300, color: NCBrandColor.sharedInstance.brandElement)

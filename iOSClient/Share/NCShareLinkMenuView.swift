@@ -24,7 +24,7 @@ import Foundation
 import FSCalendar
 //mport NCCommunication
 
-class NCShareLinkMenuView: UIView, UIGestureRecognizerDelegate, NCShareNetworkingDelegate, FSCalendarDelegate, FSCalendarDelegateAppearance {
+class NCShareLinkMenuView: UIView, UIGestureRecognizerDelegate, NCShareNetworkingDelegate, FSCalendarDelegate, FSCalendarDelegateAppearance,UITextFieldDelegate {
     
     @IBOutlet weak var switchAllowEditing: UISwitch!
     @IBOutlet weak var labelAllowEditing: UILabel!

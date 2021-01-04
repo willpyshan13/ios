@@ -94,12 +94,12 @@ class CCMore: UIViewController, UITableViewDelegate, UITableViewDataSource {
         item.url = "segueRecent"
         functionMenu.append(item)
         
-        // ITEM : Notification
-        item = NCCommunicationExternalSite()
-        item.name = "_notification_"
-        item.icon = "notification"
-        item.url = "segueNotification"
-        functionMenu.append(item)
+//        // ITEM : Notification
+//        item = NCCommunicationExternalSite()
+//        item.name = "_notification_"
+//        item.icon = "notification"
+//        item.url = "segueNotification"
+//        functionMenu.append(item)
 
         // ITEM : Activity
         item = NCCommunicationExternalSite()
@@ -108,12 +108,12 @@ class CCMore: UIViewController, UITableViewDelegate, UITableViewDataSource {
         item.url = "segueActivity"
         functionMenu.append(item)
 
-        // ITEM : Shares
-        item = NCCommunicationExternalSite()
-        item.name = "_list_shares_"
-        item.icon = "shareFill"
-        item.url = "segueShares"
-        functionMenu.append(item)
+//        // ITEM : Shares
+//        item = NCCommunicationExternalSite()
+//        item.name = "_list_shares_"
+//        item.icon = "shareFill"
+//        item.url = "segueShares"
+//        functionMenu.append(item)
 
         // ITEM : Offline
         item = NCCommunicationExternalSite()
