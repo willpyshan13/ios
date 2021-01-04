@@ -24,6 +24,13 @@ import Foundation
 import FSCalendar
 //mport NCCommunication
 
+let kScreen_Width:CGFloat = UIScreen.main.bounds.size.width
+let kScreen_Height:CGFloat = UIScreen.main.bounds.size.height
+let Is_Iphone:Bool = (UIDevice.current.userInterfaceIdiom == .phone)
+let Is_Iphone_X:Bool = (Is_Iphone && kScreen_Height > 811.0)
+let kNavHeight:CGFloat = (Is_Iphone_X ? 88.0 : 64.0)
+let kTabHeight:CGFloat = (Is_Iphone_X ? 83.0 : 49.0)
+
 class NCShareLinkMenuView: UIView, UIGestureRecognizerDelegate, NCShareNetworkingDelegate, FSCalendarDelegate, FSCalendarDelegateAppearance,UITextFieldDelegate {
     
     @IBOutlet weak var switchAllowEditing: UISwitch!
@@ -74,6 +81,12 @@ class NCShareLinkMenuView: UIView, UIGestureRecognizerDelegate, NCShareNetworkin
     var viewWindow: UIView?
     var viewWindowCalendar: UIView?
     private var calendar: FSCalendar?
+    
+    
+    //记录 self.view 的原始 origin.y
+    private var originY: CGFloat = 0
+    var editTF: UITextField!
+
 
     override func awakeFromNib() {
         
@@ -125,7 +138,51 @@ class NCShareLinkMenuView: UIView, UIGestureRecognizerDelegate, NCShareNetworkin
         imageNoteToRecipient.image = CCGraphics.changeThemingColorImage(UIImage.init(named: "file_txt"), width: 100, height: 100, color: UIColor(red: 76/255, green: 76/255, blue: 76/255, alpha: 1))
         imageDeleteShareLink.image = CCGraphics.changeThemingColorImage(UIImage.init(named: "trash"), width: 100, height: 100, color: UIColor(red: 76/255, green: 76/255, blue: 76/255, alpha: 1))
         imageAddAnotherLink.image = CCGraphics.changeThemingColorImage(UIImage.init(named: "add"), width: 100, height: 100, color: UIColor(red: 76/255, green: 76/255, blue: 76/255, alpha: 1))
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+    //键盘弹起
+    @objc func keyboardWillAppear(notification: NSNotification) {
+        
+        if self.editTF != nil {
+            // 获得软键盘的高
+            let keyboardinfo = notification.userInfo![UIResponder.keyboardFrameBeginUserInfoKey]
+            let keyboardheight:CGFloat = (keyboardinfo as AnyObject).cgRectValue.size.height
+       
+            //计算输入框和软键盘的高度差
+        self.originY = self.frame.origin.y
+        let y = (UIScreen.main.bounds.height - ( self.frame.origin.y + self.editTF!.frame.origin.y) - kNavHeight) -  keyboardheight
+            
+        
+        if y < 0 {
+            //设置中心点偏移
+            UIView.animate(withDuration: 0.5) {
+                if y < 0 {
+                    self.frame = CGRect(x: self.frame.origin.x, y: (self.originY + y - 60), width: self.frame.size.width, height: self.frame.size.height)
+                }
+            }
+        }
+        }
+        
+           
+            
+        
+            
+        }
+        
+        //键盘落下
+    @objc func keyboardWillDisappear(notification:NSNotification){
+
+            //软键盘收起的时候恢复原始偏移
+            UIView.animate(withDuration: 0.5) {
+//                self.frame = CGRect(x: self.frame.origin.x, y: self.originY, width: self.frame.size.width, height: self.frame.size.height)
+                self.center = CGPoint(x: self.superview!.frame.size.width/2.0, y: self.superview!.frame.size.height/2.0)
+            }
+        
+        self.editTF = nil
+        }
+
     
     override func willMove(toWindow newWindow: UIWindow?) {
         super.willMove(toWindow: newWindow)
@@ -431,4 +488,11 @@ class NCShareLinkMenuView: UIView, UIGestureRecognizerDelegate, NCShareNetworkin
             return UIColor(red: 190/255, green: 190/255, blue: 190/255, alpha: 1)
         }
     }
+    
+   
+    //获得正在输入的UITextField
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.editTF = textField
+    }
+
 }
